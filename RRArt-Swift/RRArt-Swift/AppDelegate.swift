@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         topWindow?.hidden = false
         topWindow?.windowLevel = UIWindowLevelAlert
         topWindow?.rootViewController = TopWindowViewController.singleInstance
-        
+    
         //设置当前主控制器
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()

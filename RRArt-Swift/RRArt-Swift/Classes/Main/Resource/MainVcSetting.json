@@ -1,0 +1,27 @@
+[
+ {
+ "vcName":"Comment_RootViewController",
+ "title":"点评",
+ "imageName":"tab_ques"
+ },
+ {
+ "vcName":"Lesson_RootViewController",
+ "title":"精选",
+ "imageName":"xiadaohang_icon_kecheng"
+ },
+ {
+ "vcName":"WebSchool_RootViewController",
+ "title":"网校",
+ "imageName":"xiadaohang_icon_wangxiao"
+ },
+ {
+ "vcName":"TMall_RootViewController",
+ "title":"商城",
+ "imageName":"xiadaohang_icon_shangcheng"
+ },
+ {
+ "vcName":"MyZone_RootViewController",
+ "title":"我的",
+ "imageName":"tab_me"
+ }
+]
