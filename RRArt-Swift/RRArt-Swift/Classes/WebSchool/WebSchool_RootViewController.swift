@@ -14,10 +14,4 @@ class WebSchool_RootViewController: BaseViewController {
         super.viewDidLoad()
 
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-      
-    }
-    
 }

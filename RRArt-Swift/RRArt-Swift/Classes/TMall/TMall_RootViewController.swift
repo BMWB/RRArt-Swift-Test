@@ -14,11 +14,5 @@ class TMall_RootViewController: BaseViewController {
         super.viewDidLoad()
         
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-        
-    }
-    
+
 }

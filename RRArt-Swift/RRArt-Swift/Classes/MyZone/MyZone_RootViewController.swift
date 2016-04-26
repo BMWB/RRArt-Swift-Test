@@ -15,9 +15,4 @@ class MyZone_RootViewController: BaseViewController {
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-       
-    }
-    
 }
