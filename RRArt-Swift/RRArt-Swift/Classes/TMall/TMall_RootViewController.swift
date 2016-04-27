@@ -24,10 +24,13 @@ class TMall_RootViewController: BaseViewController {
         
         CAlamofireManager.shareTools.tMallHomeDataRequest(nil) { (responseObject) in
             
+            let models = TMallModels.objectArrayWithKeyValuesArray(responseObject as! [[String:AnyObject]])
+            print(models)
         }
         
     }
     
+
     lazy var tmallHomeView:TMallHomeView = {
         
         var layout = UICollectionViewFlowLayout()

@@ -68,6 +68,16 @@ class TMallModels: NSObject{
         setValuesForKeysWithDictionary(dict)
     }
     
+    //将字典数组转换模型数组
+    class func objectArrayWithKeyValuesArray(list:[[String:AnyObject]]) -> [TMallModels] {
+        var models = [TMallModels]()
+        
+        for dict in list {
+            models.append(TMallModels(dict:dict))
+        }
+        return models
+    }
+    
     //属性没有一一对应，就会进这个方法，然后程序也不会挂掉
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {
         
