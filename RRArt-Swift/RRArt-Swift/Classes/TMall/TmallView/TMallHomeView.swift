@@ -10,6 +10,15 @@ import UIKit
 let tMallId = "tMallHomeViewCell"
 
 class TMallHomeView: BaseCollectionView{
+    var tmallHomeArray:[TMallModels]?{//数组保存
+        didSet{
+            //刷新表格
+            reloadData()
+        }
+    }
+
+    
+    
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         
@@ -25,10 +34,10 @@ class TMallHomeView: BaseCollectionView{
    
 }
 
-extension BaseCollectionView:UICollectionViewDelegate,UICollectionViewDataSource{
+extension TMallHomeView:UICollectionViewDelegate,UICollectionViewDataSource{
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.tmallHomeArray?.count ?? 0
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

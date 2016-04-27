@@ -8,9 +8,14 @@
 
 import UIKit
 
-
 class TMall_RootViewController: BaseViewController {
-    
+    var tmallArray:[TMallModels]?{//数组保存
+        didSet{
+        //刷新表格
+            tmallHomeView.tmallHomeArray = tmallArray
+            
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +29,9 @@ class TMall_RootViewController: BaseViewController {
         
         CAlamofireManager.shareTools.tMallHomeDataRequest(nil) { (responseObject) in
             
+            //字典转模型
             let models = TMallModels.objectArrayWithKeyValuesArray(responseObject as! [[String:AnyObject]])
+            self.tmallArray = models
             print(models)
         }
         

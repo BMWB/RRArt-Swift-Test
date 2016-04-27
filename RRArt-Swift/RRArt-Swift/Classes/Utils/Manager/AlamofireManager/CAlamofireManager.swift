@@ -26,7 +26,7 @@ class CAlamofireManager: NSObject {
      */
     func tMallHomeDataRequest(param:[String:AnyObject]?,complectionHandler: HTTPRequestHandler?) -> Void {
         
-        var params = ["limit":10,"sortby":"Sortid","order":"desc"]
+        var params = ["limit":20,"sortby":"Sortid","order":"desc"]
         SVProgressHUD.showWithStatus("正在加载...")
         
         if param != nil{
