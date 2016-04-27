@@ -7,7 +7,7 @@
 //
 
 import UIKit
-let tMallId = "tMallHomeViewCell"
+
 
 class TMallHomeView: BaseCollectionView{
     var tmallHomeArray:[TMallModels]?{//数组保存
@@ -25,7 +25,7 @@ class TMallHomeView: BaseCollectionView{
         delegate = self;
         dataSource = self;
         
-        registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: tMallId)
+        registerNib(UINib(nibName: "TmallHomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: tMallId)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -41,10 +41,11 @@ extension TMallHomeView:UICollectionViewDelegate,UICollectionViewDataSource{
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(tMallId, forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(tMallId, forIndexPath: indexPath) as! TmallHomeCollectionViewCell
         
-        cell.backgroundColor = UIColor.blueColor()
+        let tamllItem = self.tmallHomeArray![indexPath.row]
         
+        cell.tmallItem = tamllItem
         return cell
     }
 

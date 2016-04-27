@@ -32,6 +32,10 @@
 		504E69D21CD048BA002CB284 /* CAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E69D11CD048BA002CB284 /* CAlamofireManager.swift */; };
 		5072935E1CCF47D4004B52EA /* MainVcSetting.json in Resources */ = {isa = PBXBuildFile; fileRef = 5072935D1CCF47D4004B52EA /* MainVcSetting.json */; };
 		507293631CCF6802004B52EA /* CAlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507293621CCF6802004B52EA /* CAlamofireClient.swift */; };
+		60402CD31CD0F74000B0E1F0 /* TmallTooBarData.json in Resources */ = {isa = PBXBuildFile; fileRef = 60402CD21CD0F74000B0E1F0 /* TmallTooBarData.json */; };
+		60402CD81CD0F7BB00B0E1F0 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60402CD71CD0F7BB00B0E1F0 /* ApiConfig.swift */; };
+		60402CDB1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60402CD91CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.swift */; };
+		60402CDC1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60402CDA1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +100,10 @@
 		504E69D11CD048BA002CB284 /* CAlamofireManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAlamofireManager.swift; sourceTree = "<group>"; };
 		5072935D1CCF47D4004B52EA /* MainVcSetting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVcSetting.json; sourceTree = "<group>"; };
 		507293621CCF6802004B52EA /* CAlamofireClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAlamofireClient.swift; sourceTree = "<group>"; };
+		60402CD21CD0F74000B0E1F0 /* TmallTooBarData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TmallTooBarData.json; sourceTree = "<group>"; };
+		60402CD71CD0F7BB00B0E1F0 /* ApiConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		60402CD91CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TmallHomeCollectionViewCell.swift; path = "RRArt-Swift/Classes/Main/TmallHomeCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		60402CDA1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TmallHomeCollectionViewCell.xib; path = "RRArt-Swift/Classes/Main/TmallHomeCollectionViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		BD53D1EFB1D50420AC613BE9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E73770F50F54CE6E43C717BC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +171,8 @@
 		5007F0BB1CD0A4D6009FF19B /* TmallViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				60402CD91CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.swift */,
+				60402CDA1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.xib */,
 			);
 			path = TmallViewCell;
 			sourceTree = "<group>";
@@ -250,10 +260,10 @@
 				5072935C1CCF47AD004B52EA /* Resource */,
 				5046804F1CCE043800F9B454 /* BaseViewController.swift */,
 				5046805F1CCE15B600F9B454 /* BaseNavigationViewController.swift */,
-				5046805D1CCE07BA00F9B454 /* TopWindowViewController.swift */,
-				5046805B1CCE05DC00F9B454 /* MainViewController.swift */,
 				5007F0B31CD09383009FF19B /* BaseTableView.swift */,
 				5007F0B51CD093DA009FF19B /* BaseCollectionView.swift */,
+				5046805D1CCE07BA00F9B454 /* TopWindowViewController.swift */,
+				5046805B1CCE05DC00F9B454 /* MainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -285,6 +295,7 @@
 		5046804D1CCE03A900F9B454 /* TMall */ = {
 			isa = PBXGroup;
 			children = (
+				60402CD11CD0F69600B0E1F0 /* TmallResource */,
 				5007F0BA1CD0A47D009FF19B /* TmallModels */,
 				5007F0B21CD09344009FF19B /* TmallView */,
 				504680571CCE054500F9B454 /* TMall_RootViewController.swift */,
@@ -329,8 +340,17 @@
 			children = (
 				504E69D11CD048BA002CB284 /* CAlamofireManager.swift */,
 				507293621CCF6802004B52EA /* CAlamofireClient.swift */,
+				60402CD71CD0F7BB00B0E1F0 /* ApiConfig.swift */,
 			);
 			path = AlamofireManager;
+			sourceTree = "<group>";
+		};
+		60402CD11CD0F69600B0E1F0 /* TmallResource */ = {
+			isa = PBXGroup;
+			children = (
+				60402CD21CD0F74000B0E1F0 /* TmallTooBarData.json */,
+			);
+			path = TmallResource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +463,8 @@
 			files = (
 				504680411CCDFC6100F9B454 /* Images.xcassets in Resources */,
 				5046801A1CCDFA4700F9B454 /* Assets.xcassets in Resources */,
+				60402CDC1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.xib in Resources */,
+				60402CD31CD0F74000B0E1F0 /* TmallTooBarData.json in Resources */,
 				5072935E1CCF47D4004B52EA /* MainVcSetting.json in Resources */,
 				504680181CCDFA4700F9B454 /* Main.storyboard in Resources */,
 			);
@@ -525,6 +547,8 @@
 				504680541CCE051C00F9B454 /* Lesson_RootViewController.swift in Sources */,
 				504680581CCE054500F9B454 /* TMall_RootViewController.swift in Sources */,
 				504680561CCE052F00F9B454 /* MyZone_RootViewController.swift in Sources */,
+				60402CDB1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.swift in Sources */,
+				60402CD81CD0F7BB00B0E1F0 /* ApiConfig.swift in Sources */,
 				5007F0B41CD09383009FF19B /* BaseTableView.swift in Sources */,
 				507293631CCF6802004B52EA /* CAlamofireClient.swift in Sources */,
 				504680151CCDFA4700F9B454 /* ViewController.swift in Sources */,
