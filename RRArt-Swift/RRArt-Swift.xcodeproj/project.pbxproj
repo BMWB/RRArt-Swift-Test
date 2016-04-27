@@ -24,7 +24,9 @@
 		5046805C1CCE05DC00F9B454 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046805B1CCE05DC00F9B454 /* MainViewController.swift */; };
 		5046805E1CCE07BA00F9B454 /* TopWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046805D1CCE07BA00F9B454 /* TopWindowViewController.swift */; };
 		504680601CCE15B600F9B454 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046805F1CCE15B600F9B454 /* BaseNavigationViewController.swift */; };
+		504E69D21CD048BA002CB284 /* CAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E69D11CD048BA002CB284 /* CAlamofireManager.swift */; };
 		5072935E1CCF47D4004B52EA /* MainVcSetting.json in Resources */ = {isa = PBXBuildFile; fileRef = 5072935D1CCF47D4004B52EA /* MainVcSetting.json */; };
+		507293631CCF6802004B52EA /* CAlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507293621CCF6802004B52EA /* CAlamofireClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +70,9 @@
 		5046805B1CCE05DC00F9B454 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5046805D1CCE07BA00F9B454 /* TopWindowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopWindowViewController.swift; sourceTree = "<group>"; };
 		5046805F1CCE15B600F9B454 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		504E69D11CD048BA002CB284 /* CAlamofireManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAlamofireManager.swift; sourceTree = "<group>"; };
 		5072935D1CCF47D4004B52EA /* MainVcSetting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVcSetting.json; sourceTree = "<group>"; };
+		507293621CCF6802004B52EA /* CAlamofireClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAlamofireClient.swift; sourceTree = "<group>"; };
 		BD53D1EFB1D50420AC613BE9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E73770F50F54CE6E43C717BC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +177,7 @@
 		504680421CCE017A00F9B454 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5072935F1CCF656D004B52EA /* Utils */,
 				5046804A1CCE03A900F9B454 /* Comment */,
 				5046804B1CCE03A900F9B454 /* Lesson */,
 				5046804C1CCE03A900F9B454 /* MyZone */,
@@ -249,6 +254,31 @@
 				5072935D1CCF47D4004B52EA /* MainVcSetting.json */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		5072935F1CCF656D004B52EA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				507293601CCF65CD004B52EA /* Manager */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		507293601CCF65CD004B52EA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				507293611CCF6610004B52EA /* AlamofireManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		507293611CCF6610004B52EA /* AlamofireManager */ = {
+			isa = PBXGroup;
+			children = (
+				504E69D11CD048BA002CB284 /* CAlamofireManager.swift */,
+				507293621CCF6802004B52EA /* CAlamofireClient.swift */,
+			);
+			path = AlamofireManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,10 +467,12 @@
 				504680601CCE15B600F9B454 /* BaseNavigationViewController.swift in Sources */,
 				5046805E1CCE07BA00F9B454 /* TopWindowViewController.swift in Sources */,
 				504680521CCE04FE00F9B454 /* Comment_RootViewController.swift in Sources */,
+				504E69D21CD048BA002CB284 /* CAlamofireManager.swift in Sources */,
 				5046805A1CCE055600F9B454 /* WebSchool_RootViewController.swift in Sources */,
 				504680541CCE051C00F9B454 /* Lesson_RootViewController.swift in Sources */,
 				504680581CCE054500F9B454 /* TMall_RootViewController.swift in Sources */,
 				504680561CCE052F00F9B454 /* MyZone_RootViewController.swift in Sources */,
+				507293631CCF6802004B52EA /* CAlamofireClient.swift in Sources */,
 				504680151CCDFA4700F9B454 /* ViewController.swift in Sources */,
 				5046805C1CCE05DC00F9B454 /* MainViewController.swift in Sources */,
 				504680131CCDFA4700F9B454 /* AppDelegate.swift in Sources */,

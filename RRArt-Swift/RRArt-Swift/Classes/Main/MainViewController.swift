@@ -51,7 +51,7 @@ class MainViewController: UITabBarController {
     private func addChildViewController(childController: String,title:String,imageName:String) {
 //        <RRArt_Swift.Comment_RootViewController: 0x7fb4b36241d0>
         
-        //动态获取命名空间
+        //动态获取的bundle（RRArt－Swift） 和命名空间（RRArt_Swift）有出入
 //        let nameZone = NSBundle.mainBundle().infoDictionary!["CFBundleExecutable"] as! String
         
         //将字符串转为类
