@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 let kShopProductsClassinfoUrl =  "http://app.renrenmeishu.com:20100/v1/products/classinfo"
 
@@ -19,18 +20,31 @@ class CAlamofireManager: NSObject {
         return instance
         
     }
-
+    
     /**
      商城首页数据
      */
     func tMallHomeDataRequest(param:[String:AnyObject]?,complectionHandler: HTTPRequestHandler?) -> Void {
-        let params = ["limit":10,"sortby":"Sortid","order":"desc"]
+        var params = ["limit":10,"sortby":"Sortid","order":"desc"]
+        SVProgressHUD.showWithStatus("正在加载...")
         
-        CAlamofireClient.shareClient.dataRequest(method: .GET, urlString:kShopProductsClassinfoUrl, parameter: params) { (responseObject, error) in
+        if param != nil{
+            for (key,value) in param! {
+                params[key] = (value as! NSObject)
+            }
+        }
+        
+        CAlamofireClient.shareClient.dataRequest(method: .GET, urlString: kShopProductsClassinfoUrl, parameter: params, complectionHandler: { (responseObject) in
+            SVProgressHUD.showSuccessWithStatus("加载成功")
+            complectionHandler!(responseObject: responseObject)
             
-            complectionHandler!(responseObject: responseObject,error: error)
+        }) { (error) in
+            SVProgressHUD.showErrorWithStatus("加载失败")
+            print(error)
+            
             
         }
+        
     }
     
 }

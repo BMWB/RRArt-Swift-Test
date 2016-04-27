@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 
+
 public enum HTTPRequestError: ErrorType {
     case None
     case SystemError(error: NSError?)
@@ -17,7 +18,8 @@ public enum HTTPRequestError: ErrorType {
 }
 
 
-public typealias HTTPRequestHandler = (responseObject: AnyObject?, error: HTTPRequestError?) -> Void
+public typealias HTTPRequestHandler = (responseObject: AnyObject?) -> Void
+public typealias HTTPReErrorHandler = (error: HTTPRequestError?) -> Void
 //public typealias HTTPRequestJSONHandler = (responseObject: JSON?, error: HTTPRequestError?) -> Void
 
 private let instance = CAlamofireClient()
@@ -59,18 +61,32 @@ public class CAlamofireClient:NSObject{
     }
     
     
-    public func dataRequest(method m: Method, urlString url: URLStringConvertible, parameter param: [String : AnyObject]?, complectionHandler: HTTPRequestHandler?) -> Request{
+    public func dataRequest(method m: Method, urlString url: URLStringConvertible, parameter param: [String : AnyObject]?, complectionHandler: HTTPRequestHandler?,errorHandler:HTTPReErrorHandler?) -> Request{
         
         let req = Alamofire.request(m.alamofireMethod, url, parameters: param, encoding: .URL, headers: nil)
         
         req.responseJSON { (resp) -> Void in
             if resp.result.isSuccess {
-                if let handler = complectionHandler {
-                    handler(responseObject: resp.result.value, error: nil)
+                var dict = resp.result.value as! [String :AnyObject]
+                
+                if (dict["code"] as! Int) == 200{
+                    if let handler = complectionHandler {
+                        handler(responseObject: resp.result.value)
+                        
+                    }
+                    
+                }else{
+                    if let handler = errorHandler {
+                        
+                        handler(error: HTTPRequestError.BusinessError(description: (dict["code"] as! String)))
+                    }
+                    
                 }
+                
             } else {
-                if let handler = complectionHandler {
-                    handler(responseObject: nil, error: HTTPRequestError.SystemError(error: resp.result.error))
+                
+                if let handler = errorHandler {
+                    handler(error: HTTPRequestError.SystemError(error: resp.result.error))
                 }
             }
         }
