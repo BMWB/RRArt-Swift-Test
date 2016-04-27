@@ -20,7 +20,15 @@ public enum HTTPRequestError: ErrorType {
 public typealias HTTPRequestHandler = (responseObject: AnyObject?, error: HTTPRequestError?) -> Void
 //public typealias HTTPRequestJSONHandler = (responseObject: JSON?, error: HTTPRequestError?) -> Void
 
+private let instance = CAlamofireClient()
+
 public class CAlamofireClient:NSObject{
+    
+    class var shareClient:CAlamofireClient{
+        
+        return instance
+        
+    }
     
     public enum Method : String {
         case OPTIONS, GET, HEAD, POST, PUT, PATCH, DELETE, TRACE, CONNECT
@@ -49,7 +57,7 @@ public class CAlamofireClient:NSObject{
             return results
         }
     }
-
+    
     
     public func dataRequest(method m: Method, urlString url: URLStringConvertible, parameter param: [String : AnyObject]?, complectionHandler: HTTPRequestHandler?) -> Request{
         

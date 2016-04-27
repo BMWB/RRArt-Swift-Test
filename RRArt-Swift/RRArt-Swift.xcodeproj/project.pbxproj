@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		18522768EF19C0601118ADC2 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1E06D2BCD50AEC55A117ED /* Pods.framework */; };
+		5007F0B11CD0907F009FF19B /* Pods.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D1E06D2BCD50AEC55A117ED /* Pods.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5007F0B41CD09383009FF19B /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5007F0B31CD09383009FF19B /* BaseTableView.swift */; };
+		5007F0B61CD093DA009FF19B /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5007F0B51CD093DA009FF19B /* BaseCollectionView.swift */; };
+		5007F0B81CD09405009FF19B /* TMallHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5007F0B71CD09405009FF19B /* TMallHomeView.swift */; };
+		5007F0BD1CD0A4EF009FF19B /* TMallModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5007F0BC1CD0A4EF009FF19B /* TMallModels.swift */; };
 		504680131CCDFA4700F9B454 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504680121CCDFA4700F9B454 /* AppDelegate.swift */; };
 		504680151CCDFA4700F9B454 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504680141CCDFA4700F9B454 /* ViewController.swift */; };
 		504680181CCDFA4700F9B454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 504680161CCDFA4700F9B454 /* Main.storyboard */; };
@@ -46,8 +51,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5007F0B01CD0906B009FF19B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5007F0B11CD0907F009FF19B /* Pods.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0D1E06D2BCD50AEC55A117ED /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5007F0AF1CD08D7D009FF19B /* RRArt-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RRArt-Bridge.h"; sourceTree = "<group>"; };
+		5007F0B31CD09383009FF19B /* BaseTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
+		5007F0B51CD093DA009FF19B /* BaseCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
+		5007F0B71CD09405009FF19B /* TMallHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMallHomeView.swift; sourceTree = "<group>"; };
+		5007F0BC1CD0A4EF009FF19B /* TMallModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMallModels.swift; sourceTree = "<group>"; };
 		5046800F1CCDFA4700F9B454 /* RRArt-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RRArt-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		504680121CCDFA4700F9B454 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		504680141CCDFA4700F9B454 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +143,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5007F0B21CD09344009FF19B /* TmallView */ = {
+			isa = PBXGroup;
+			children = (
+				5007F0BB1CD0A4D6009FF19B /* TmallViewCell */,
+				5007F0B71CD09405009FF19B /* TMallHomeView.swift */,
+			);
+			path = TmallView;
+			sourceTree = "<group>";
+		};
+		5007F0BA1CD0A47D009FF19B /* TmallModels */ = {
+			isa = PBXGroup;
+			children = (
+				5007F0BC1CD0A4EF009FF19B /* TMallModels.swift */,
+			);
+			path = TmallModels;
+			sourceTree = "<group>";
+		};
+		5007F0BB1CD0A4D6009FF19B /* TmallViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TmallViewCell;
+			sourceTree = "<group>";
+		};
 		504680061CCDFA4700F9B454 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +194,7 @@
 			children = (
 				504680121CCDFA4700F9B454 /* AppDelegate.swift */,
 				504680141CCDFA4700F9B454 /* ViewController.swift */,
+				5007F0AF1CD08D7D009FF19B /* RRArt-Bridge.h */,
 				504680421CCE017A00F9B454 /* Classes */,
 				504680161CCDFA4700F9B454 /* Main.storyboard */,
 				504680191CCDFA4700F9B454 /* Assets.xcassets */,
@@ -204,6 +252,8 @@
 				5046805F1CCE15B600F9B454 /* BaseNavigationViewController.swift */,
 				5046805D1CCE07BA00F9B454 /* TopWindowViewController.swift */,
 				5046805B1CCE05DC00F9B454 /* MainViewController.swift */,
+				5007F0B31CD09383009FF19B /* BaseTableView.swift */,
+				5007F0B51CD093DA009FF19B /* BaseCollectionView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -235,6 +285,8 @@
 		5046804D1CCE03A900F9B454 /* TMall */ = {
 			isa = PBXGroup;
 			children = (
+				5007F0BA1CD0A47D009FF19B /* TmallModels */,
+				5007F0B21CD09344009FF19B /* TmallView */,
 				504680571CCE054500F9B454 /* TMall_RootViewController.swift */,
 			);
 			path = TMall;
@@ -294,6 +346,7 @@
 				5046800D1CCDFA4700F9B454 /* Resources */,
 				3FF394A4F0708D04BAE2B07B /* Embed Pods Frameworks */,
 				AFD0B12F8C15891E40CFAB7A /* Copy Pods Resources */,
+				5007F0B01CD0906B009FF19B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -472,11 +525,15 @@
 				504680541CCE051C00F9B454 /* Lesson_RootViewController.swift in Sources */,
 				504680581CCE054500F9B454 /* TMall_RootViewController.swift in Sources */,
 				504680561CCE052F00F9B454 /* MyZone_RootViewController.swift in Sources */,
+				5007F0B41CD09383009FF19B /* BaseTableView.swift in Sources */,
 				507293631CCF6802004B52EA /* CAlamofireClient.swift in Sources */,
 				504680151CCDFA4700F9B454 /* ViewController.swift in Sources */,
 				5046805C1CCE05DC00F9B454 /* MainViewController.swift in Sources */,
+				5007F0B81CD09405009FF19B /* TMallHomeView.swift in Sources */,
 				504680131CCDFA4700F9B454 /* AppDelegate.swift in Sources */,
 				504680501CCE043800F9B454 /* BaseViewController.swift in Sources */,
+				5007F0B61CD093DA009FF19B /* BaseCollectionView.swift in Sources */,
+				5007F0BD1CD0A4EF009FF19B /* TMallModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +680,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yibei.renrenmeishu.RRArt-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RRArt-Swift/RRArt-Bridge.h";
 			};
 			name = Debug;
 		};
@@ -643,6 +701,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yibei.renrenmeishu.RRArt-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RRArt-Swift/RRArt-Bridge.h";
 			};
 			name = Release;
 		};

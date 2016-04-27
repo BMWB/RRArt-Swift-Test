@@ -8,13 +8,25 @@
 
 import UIKit
 
+let kShopProductsClassinfoUrl =  "http://app.renrenmeishu.com:20100/v1/products/classinfo"
+
+private let instance = CAlamofireManager()
+
 class CAlamofireManager: NSObject {
+    
+    class var shareTools:CAlamofireManager{
+        
+        return instance
+        
+    }
+
     /**
      商城首页数据
      */
-    func tMAllHomeDataRequest(urlString:String ,param:[String:AnyObject]?,complectionHandler: HTTPRequestHandler?) -> Void {
+    func tMallHomeDataRequest(param:[String:AnyObject]?,complectionHandler: HTTPRequestHandler?) -> Void {
+        let params = ["limit":10,"sortby":"Sortid","order":"desc"]
         
-        CAlamofireClient().dataRequest(method: .GET, urlString: urlString, parameter: param) { (responseObject, error) in
+        CAlamofireClient.shareClient.dataRequest(method: .GET, urlString:kShopProductsClassinfoUrl, parameter: params) { (responseObject, error) in
             
             complectionHandler!(responseObject: responseObject,error: error)
             
