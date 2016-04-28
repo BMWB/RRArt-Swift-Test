@@ -42,6 +42,7 @@
 		60402CD81CD0F7BB00B0E1F0 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60402CD71CD0F7BB00B0E1F0 /* ApiConfig.swift */; };
 		60402CDB1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60402CD91CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.swift */; };
 		60402CDC1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60402CDA1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.xib */; };
+		60402CE11CD247AB00B0E1F0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60402CE01CD247AB00B0E1F0 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		60402CD71CD0F7BB00B0E1F0 /* ApiConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
 		60402CD91CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TmallHomeCollectionViewCell.swift; path = "RRArt-Swift/Classes/Main/TmallHomeCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		60402CDA1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TmallHomeCollectionViewCell.xib; path = "RRArt-Swift/Classes/Main/TmallHomeCollectionViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		60402CE01CD247AB00B0E1F0 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		BD53D1EFB1D50420AC613BE9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E73770F50F54CE6E43C717BC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -374,6 +376,7 @@
 		507293601CCF65CD004B52EA /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				60402CDF1CD2474A00B0E1F0 /* WebVcManager */,
 				507293611CCF6610004B52EA /* AlamofireManager */,
 			);
 			path = Manager;
@@ -395,6 +398,14 @@
 				5055B0721CD1B7B500E76204 /* TmallTooBarData.json */,
 			);
 			path = TmallResource;
+			sourceTree = "<group>";
+		};
+		60402CDF1CD2474A00B0E1F0 /* WebVcManager */ = {
+			isa = PBXGroup;
+			children = (
+				60402CE01CD247AB00B0E1F0 /* WebViewController.swift */,
+			);
+			path = WebVcManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -594,6 +605,7 @@
 				5055B06F1CD1A2B000E76204 /* YZFlowLayout.m in Sources */,
 				504680561CCE052F00F9B454 /* MyZone_RootViewController.swift in Sources */,
 				5055B06C1CD1A2B000E76204 /* UIView+Frame.m in Sources */,
+				60402CE11CD247AB00B0E1F0 /* WebViewController.swift in Sources */,
 				60402CDB1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.swift in Sources */,
 				60402CD81CD0F7BB00B0E1F0 /* ApiConfig.swift in Sources */,
 				5007F0B41CD09383009FF19B /* BaseTableView.swift in Sources */,

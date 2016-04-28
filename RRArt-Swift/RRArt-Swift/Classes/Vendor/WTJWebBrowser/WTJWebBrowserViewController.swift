@@ -9,16 +9,19 @@
 import UIKit
 import WebKit
 
-public protocol WTJWebBrowserDelegate : NSObjectProtocol{
+protocol WTJWebBrowserDelegate : NSObjectProtocol{
     
-//    func webBrowserdidStartLoadingURL(webBrowser:WTJWebBrowserViewController, Url:NSURL)
+   func webBrowserdidStartLoadingURL(webBrowser:UIViewController, Url:NSURL)
+   func webBrowserdidFinishLoadingURL(webBrowser:UIViewController, Url:NSURL)
+   func webBrowserdidFailToLoadURL(webBrowser:UIViewController, Url:NSURL)
     
 }
 
 
 class WTJWebBrowserViewController: UIViewController {
-
+    
     var wkWebView :WKWebView?
+    weak var wtjWebdelegate :WTJWebBrowserDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +35,7 @@ class WTJWebBrowserViewController: UIViewController {
             wkWebView?.scrollView.alwaysBounceVertical = true
             view.addSubview(wkWebView!)
         }
-    
+        
     }
     
     //MARK: -构造方法
@@ -107,17 +110,17 @@ extension WTJWebBrowserViewController:WKUIDelegate,WKNavigationDelegate{
     //MARK: -WKNavigationDelegate
     //开始加载
     func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        
+        wtjWebdelegate?.webBrowserdidStartLoadingURL(self, Url: webView.URL!)
     }
     
     //加载完成
     func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
-        
+        wtjWebdelegate?.webBrowserdidFinishLoadingURL(self, Url: webView.URL!)
     }
     
     //加载失败
     func webView(webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: NSError) {
-        
+        wtjWebdelegate?.webBrowserdidFailToLoadURL(self, Url: webView.URL!)
     }
     
     func webView(webView: WKWebView, didFailNavigation navigation: WKNavigation!, withError error: NSError) {
@@ -125,9 +128,9 @@ extension WTJWebBrowserViewController:WKUIDelegate,WKNavigationDelegate{
     }
     
     func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: (WKNavigationActionPolicy) -> Void) {
-    
+        
         let url = navigationAction.request.URL
-    
+        
         if externalAppRequiredToOpenURL(url!){
             
             if (navigationAction.targetFrame == nil) {
@@ -147,9 +150,9 @@ extension WTJWebBrowserViewController:WKUIDelegate,WKNavigationDelegate{
         decisionHandler(WKNavigationActionPolicy.Allow)
     }
     
-    // js 里面的alert实现，如果不实现，网页的alert函数无效 
+    // js 里面的alert实现，如果不实现，网页的alert函数无效
     func webView(webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: (Bool) -> Void) {
-     
+        
         let customalert = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         
         customalert.addAction(UIAlertAction(title: "确定", style: UIAlertActionStyle.Default, handler: { (alert) in
@@ -160,7 +163,7 @@ extension WTJWebBrowserViewController:WKUIDelegate,WKNavigationDelegate{
             completionHandler(false)
         }))
         
-        presentViewController(customalert, animated: true) { 
+        presentViewController(customalert, animated: true) {
             
         }
     }

@@ -39,8 +39,8 @@ class TMallHomeViewController: BaseViewController {
         //跳转
         tmallHomeView.clickTmallHomeItem {[unowned self](tmall) in
             debugPrint(tmall)
-            let webVc = WTJWebBrowserViewController()
-            webVc.loadURLString((tmall?.Url)!)
+            let webVc = WebViewController(url: (tmall?.Url)!)
+           
             self.navigationController!.pushViewController(webVc, animated: true)
         }
     }
