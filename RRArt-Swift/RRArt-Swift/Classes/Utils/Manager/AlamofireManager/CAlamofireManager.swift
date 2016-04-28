@@ -23,7 +23,7 @@ class CAlamofireManager: NSObject {
     /**
      商城首页数据
      */
-    func tMallHomeDataRequest(param:[String:AnyObject]?,complectionHandler: HTTPRequestHandler?) -> Void {
+    func tMallHomeDataRequest(param:[String:AnyObject]?,tmallModel:CTmallHomeModel,complectionHandler: HTTPRequestHandler?) -> Void {
         SVProgressHUD.showWithStatus("正在加载...")
         var params = ["limit":20,"sortby":"Sortid","order":"desc"]
         if param != nil{
@@ -32,16 +32,15 @@ class CAlamofireManager: NSObject {
             }
         }
         
-        CAlamofireClient.shareClient.dataRequest(method: .GET, urlString: getHttpRequestUrl(kShopProductsClassinfoUrl), parameter: params, complectionHandler: { (responseObject) in
+        CAlamofireClient.shareClient.dataRequest(method: .GET, urlString: getHttpRequestUrl(tmallModel.Url!), parameter: params, complectionHandler: { (responseObject) in
             
             SVProgressHUD.showSuccessWithStatus("加载成功")
             SVProgressHUD.dismissWithDelay(0.5)
-            complectionHandler!(responseObject: responseObject!["ClassInfo"])
+            complectionHandler!(responseObject: responseObject![(tmallModel.key! ) ])
             
         }) { (error) in
             SVProgressHUD.showErrorWithStatus("加载失败")
             print(error)
-            
             
         }
         

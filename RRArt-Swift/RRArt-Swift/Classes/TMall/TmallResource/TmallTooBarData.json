@@ -1,50 +1,47 @@
-{
-    "shopProductData":[
-                       {
-                       "Id": 1,
-                       "name": "网校课程",
-                       "Url": "/v1/products/classinfo",
-                       "key": "ClassInfo",
-                       "BuyUrl":"/v1/products/class",
-                       "BuyRecordUrl":"/v1/products/classbuyrecord",
-                       "BuyRecordKey": "ClassBuyRecord",
-                       "Classeskey":"Tags",
-                       "ClassesUrl": "/v1/products/classtags",
-                       },
-                       {
-                       "Id": 2,
-                       "name": "电子书",
-                       "Url": "/v1/products/ebookinfo",
-                       "key": "EBookInfo",
-                       "BuyUrl":"/v1/products/ebook",
-                       "BuyRecordUrl":"/v1/products/ebookbuyrecord",
-                       "BuyRecordKey": "Record",
-                       "Classeskey":"Tags",
-                       "ClassesUrl": "/v1/products/ebooktags",
-                       },
-                       {
-                       "Id": 3,
-                       "name": "画材",
-                       "Url": "/v1/products/paintinfo",
-                       "key": "PaintInfo",
-                       "BuyUrl":"/v1/products/paint",
-                       "BuyRecordUrl":"/v1/products/paintbuyrecord",
-                       "BuyRecordKey": "Record",
-                       "Classeskey":"Tags",
-                       "ClassesUrl": "/v1/products/painttags",
-                       },
-                       {
-                       "Id": 4,
-                       "name": "书籍",
-                       "Url": "/v1/products/bookinfo",
-                       "key": "BookInfo",
-                       "BuyUrl":"/v1/products/book",
-                       "BuyRecordUrl":"/v1/products/bookbuyrecord",
-                       "BuyRecordKey": "Record",
-                       "Classeskey":"Tags",
-                       "ClassesUrl": "/v1/products/booktags",
-                       }
-                       
-                       ],
-    
-}
+ [
+  {
+  "Id": 1,
+  "name": "课程",
+  "Url": "/v1/products/classinfo",
+  "key": "ClassInfo",
+  "BuyUrl":"/v1/products/class",
+  "BuyRecordUrl":"/v1/products/classbuyrecord",
+  "BuyRecordKey": "ClassBuyRecord",
+  "Classeskey":"Tags",
+  "ClassesUrl": "/v1/products/classtags",
+  },
+  {
+  "Id": 2,
+  "name": "电子书",
+  "Url": "/v1/products/ebookinfo",
+  "key": "EBookInfo",
+  "BuyUrl":"/v1/products/ebook",
+  "BuyRecordUrl":"/v1/products/ebookbuyrecord",
+  "BuyRecordKey": "Record",
+  "Classeskey":"Tags",
+  "ClassesUrl": "/v1/products/ebooktags",
+  },
+  {
+  "Id": 3,
+  "name": "画材",
+  "Url": "/v1/products/paintinfo",
+  "key": "PaintInfo",
+  "BuyUrl":"/v1/products/paint",
+  "BuyRecordUrl":"/v1/products/paintbuyrecord",
+  "BuyRecordKey": "Record",
+  "Classeskey":"Tags",
+  "ClassesUrl": "/v1/products/painttags",
+  },
+  {
+  "Id": 4,
+  "name": "书籍",
+  "Url": "/v1/products/bookinfo",
+  "key": "BookInfo",
+  "BuyUrl":"/v1/products/book",
+  "BuyRecordUrl":"/v1/products/bookbuyrecord",
+  "BuyRecordKey": "Record",
+  "Classeskey":"Tags",
+  "ClassesUrl": "/v1/products/booktags",
+  }
+  
+  ]
