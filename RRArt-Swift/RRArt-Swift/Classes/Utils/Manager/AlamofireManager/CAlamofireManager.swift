@@ -35,7 +35,7 @@ class CAlamofireManager: NSObject {
         CAlamofireClient.shareClient.dataRequest(method: .GET, urlString: getHttpRequestUrl(tmallModel.Url!), parameter: params, complectionHandler: { (responseObject) in
             
             SVProgressHUD.showSuccessWithStatus("加载成功")
-            SVProgressHUD.dismissWithDelay(0.5)
+            SVProgressHUD.dismissWithDelay(1)
             complectionHandler!(responseObject: responseObject![(tmallModel.key! ) ])
             
         }) { (error) in
