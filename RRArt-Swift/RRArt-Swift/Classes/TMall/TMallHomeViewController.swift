@@ -37,12 +37,15 @@ class TMallHomeViewController: BaseViewController {
         loadData()
         
         //跳转
-        tmallHomeView.clickTmallHomeItem {(tmall) in
+        tmallHomeView.clickTmallHomeItem {[unowned self](tmall) in
             debugPrint(tmall)
+            let webVc = WTJWebBrowserViewController()
+            webVc.loadURLString((tmall?.Url)!)
+            self.navigationController!.pushViewController(webVc, animated: true)
         }
     }
     
-    //MARK: － 获取商城首页数据
+    //MARK: －获取商城首页数据
     private func loadData(){
         
         CAlamofireManager.shareTools.tMallHomeDataRequest(nil,tmallModel: tmallModel!) { (responseObject) in
@@ -56,7 +59,7 @@ class TMallHomeViewController: BaseViewController {
         
     }
     
-    //MARK: － 懒加载
+    //MARK: －懒加载
     lazy var tmallHomeView:TMallHomeView = {
         
         var layout = UICollectionViewFlowLayout()

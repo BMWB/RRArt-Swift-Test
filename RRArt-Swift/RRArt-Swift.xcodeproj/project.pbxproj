@@ -36,6 +36,7 @@
 		5055B06F1CD1A2B000E76204 /* YZFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055B06B1CD1A2B000E76204 /* YZFlowLayout.m */; };
 		5055B0711CD1A3AB00E76204 /* TMallMenu_RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055B0701CD1A3AB00E76204 /* TMallMenu_RootViewController.swift */; };
 		5055B0731CD1B7B500E76204 /* TmallTooBarData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5055B0721CD1B7B500E76204 /* TmallTooBarData.json */; };
+		5055B0761CD1EDDD00E76204 /* WTJWebBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055B0751CD1EDDD00E76204 /* WTJWebBrowserViewController.swift */; };
 		5072935E1CCF47D4004B52EA /* MainVcSetting.json in Resources */ = {isa = PBXBuildFile; fileRef = 5072935D1CCF47D4004B52EA /* MainVcSetting.json */; };
 		507293631CCF6802004B52EA /* CAlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507293621CCF6802004B52EA /* CAlamofireClient.swift */; };
 		60402CD81CD0F7BB00B0E1F0 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60402CD71CD0F7BB00B0E1F0 /* ApiConfig.swift */; };
@@ -114,6 +115,7 @@
 		5055B06B1CD1A2B000E76204 /* YZFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZFlowLayout.m; sourceTree = "<group>"; };
 		5055B0701CD1A3AB00E76204 /* TMallMenu_RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMallMenu_RootViewController.swift; sourceTree = "<group>"; };
 		5055B0721CD1B7B500E76204 /* TmallTooBarData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TmallTooBarData.json; sourceTree = "<group>"; };
+		5055B0751CD1EDDD00E76204 /* WTJWebBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTJWebBrowserViewController.swift; sourceTree = "<group>"; };
 		5072935D1CCF47D4004B52EA /* MainVcSetting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVcSetting.json; sourceTree = "<group>"; };
 		507293621CCF6802004B52EA /* CAlamofireClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAlamofireClient.swift; sourceTree = "<group>"; };
 		60402CD71CD0F7BB00B0E1F0 /* ApiConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 		504680431CCE01C700F9B454 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				5055B0741CD1ED7200E76204 /* WTJWebBrowser */,
 				5055B0621CD1A2B000E76204 /* YZDisplayViewController */,
 			);
 			path = Vendor;
@@ -342,6 +345,14 @@
 				5055B06B1CD1A2B000E76204 /* YZFlowLayout.m */,
 			);
 			path = YZDisplayViewController;
+			sourceTree = "<group>";
+		};
+		5055B0741CD1ED7200E76204 /* WTJWebBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				5055B0751CD1EDDD00E76204 /* WTJWebBrowserViewController.swift */,
+			);
+			path = WTJWebBrowser;
 			sourceTree = "<group>";
 		};
 		5072935C1CCF47AD004B52EA /* Resource */ = {
@@ -578,6 +589,7 @@
 				504E69D21CD048BA002CB284 /* CAlamofireManager.swift in Sources */,
 				5046805A1CCE055600F9B454 /* WebSchool_RootViewController.swift in Sources */,
 				504680541CCE051C00F9B454 /* Lesson_RootViewController.swift in Sources */,
+				5055B0761CD1EDDD00E76204 /* WTJWebBrowserViewController.swift in Sources */,
 				504680581CCE054500F9B454 /* TMallHomeViewController.swift in Sources */,
 				5055B06F1CD1A2B000E76204 /* YZFlowLayout.m in Sources */,
 				504680561CCE052F00F9B454 /* MyZone_RootViewController.swift in Sources */,

@@ -22,7 +22,7 @@ class TMallHomeView: BaseCollectionView{
         }
     }
     
-    //MARK: － 构造方法
+    //MARK: －构造方法
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         
@@ -37,7 +37,7 @@ class TMallHomeView: BaseCollectionView{
     }
     
     
-    //MARK: － 私有方法 闭包回调
+    //MARK: －私有方法 闭包回调
     func clickTmallHomeItem(tmall: TMallHomeClickHandler) {
         
         self.clickHandler = tmall
