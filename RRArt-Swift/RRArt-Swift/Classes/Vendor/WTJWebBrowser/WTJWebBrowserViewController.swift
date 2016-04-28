@@ -9,8 +9,15 @@
 import UIKit
 import WebKit
 
-class WTJWebBrowserViewController: UIViewController {
+public protocol WTJWebBrowserDelegate : NSObjectProtocol{
     
+//    func webBrowserdidStartLoadingURL(webBrowser:WTJWebBrowserViewController, Url:NSURL)
+    
+}
+
+
+class WTJWebBrowserViewController: UIViewController {
+
     var wkWebView :WKWebView?
     
     override func viewDidLoad() {
@@ -140,6 +147,7 @@ extension WTJWebBrowserViewController:WKUIDelegate,WKNavigationDelegate{
         decisionHandler(WKNavigationActionPolicy.Allow)
     }
     
+    // js 里面的alert实现，如果不实现，网页的alert函数无效 
     func webView(webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: (Bool) -> Void) {
      
         let customalert = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.Alert)
@@ -157,6 +165,7 @@ extension WTJWebBrowserViewController:WKUIDelegate,WKNavigationDelegate{
         }
     }
     
+    // js 里面的alert实现，如果不实现，网页的alert函数无效
     func webView(webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: () -> Void) {
         let customalert = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         
