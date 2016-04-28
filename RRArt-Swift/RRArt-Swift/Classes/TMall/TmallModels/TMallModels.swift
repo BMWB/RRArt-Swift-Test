@@ -85,6 +85,7 @@ class TMallModels: NSObject{
     
     //打印当前模型
     var properties = ["Active","BuyTimes","Decript","Hours","Id","Url","Name","Maintitle","Subtitle","NormalMoney","SaleMoney","Stock","Total","Sortid","Image","Title","Tags","RealUrl"]
+    
     override var description: String{
         let dict = dictionaryWithValuesForKeys(properties)
         return "\(dict)"

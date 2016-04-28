@@ -24,12 +24,17 @@
 		504680521CCE04FE00F9B454 /* Comment_RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504680511CCE04FE00F9B454 /* Comment_RootViewController.swift */; };
 		504680541CCE051C00F9B454 /* Lesson_RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504680531CCE051C00F9B454 /* Lesson_RootViewController.swift */; };
 		504680561CCE052F00F9B454 /* MyZone_RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504680551CCE052F00F9B454 /* MyZone_RootViewController.swift */; };
-		504680581CCE054500F9B454 /* TMall_RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504680571CCE054500F9B454 /* TMall_RootViewController.swift */; };
+		504680581CCE054500F9B454 /* TMallHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504680571CCE054500F9B454 /* TMallHomeViewController.swift */; };
 		5046805A1CCE055600F9B454 /* WebSchool_RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504680591CCE055600F9B454 /* WebSchool_RootViewController.swift */; };
 		5046805C1CCE05DC00F9B454 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046805B1CCE05DC00F9B454 /* MainViewController.swift */; };
 		5046805E1CCE07BA00F9B454 /* TopWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046805D1CCE07BA00F9B454 /* TopWindowViewController.swift */; };
 		504680601CCE15B600F9B454 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046805F1CCE15B600F9B454 /* BaseNavigationViewController.swift */; };
 		504E69D21CD048BA002CB284 /* CAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E69D11CD048BA002CB284 /* CAlamofireManager.swift */; };
+		5055B06C1CD1A2B000E76204 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055B0641CD1A2B000E76204 /* UIView+Frame.m */; };
+		5055B06D1CD1A2B000E76204 /* YZDisplayTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055B0661CD1A2B000E76204 /* YZDisplayTitleLabel.m */; };
+		5055B06E1CD1A2B000E76204 /* YZDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055B0681CD1A2B000E76204 /* YZDisplayViewController.m */; };
+		5055B06F1CD1A2B000E76204 /* YZFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055B06B1CD1A2B000E76204 /* YZFlowLayout.m */; };
+		5055B0711CD1A3AB00E76204 /* TMallMenu_RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055B0701CD1A3AB00E76204 /* TMallMenu_RootViewController.swift */; };
 		5072935E1CCF47D4004B52EA /* MainVcSetting.json in Resources */ = {isa = PBXBuildFile; fileRef = 5072935D1CCF47D4004B52EA /* MainVcSetting.json */; };
 		507293631CCF6802004B52EA /* CAlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507293621CCF6802004B52EA /* CAlamofireClient.swift */; };
 		60402CD31CD0F74000B0E1F0 /* TmallTooBarData.json in Resources */ = {isa = PBXBuildFile; fileRef = 60402CD21CD0F74000B0E1F0 /* TmallTooBarData.json */; };
@@ -92,12 +97,22 @@
 		504680511CCE04FE00F9B454 /* Comment_RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment_RootViewController.swift; sourceTree = "<group>"; };
 		504680531CCE051C00F9B454 /* Lesson_RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson_RootViewController.swift; sourceTree = "<group>"; };
 		504680551CCE052F00F9B454 /* MyZone_RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyZone_RootViewController.swift; sourceTree = "<group>"; };
-		504680571CCE054500F9B454 /* TMall_RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMall_RootViewController.swift; sourceTree = "<group>"; };
+		504680571CCE054500F9B454 /* TMallHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMallHomeViewController.swift; sourceTree = "<group>"; };
 		504680591CCE055600F9B454 /* WebSchool_RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSchool_RootViewController.swift; sourceTree = "<group>"; };
 		5046805B1CCE05DC00F9B454 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5046805D1CCE07BA00F9B454 /* TopWindowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopWindowViewController.swift; sourceTree = "<group>"; };
 		5046805F1CCE15B600F9B454 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
 		504E69D11CD048BA002CB284 /* CAlamofireManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAlamofireManager.swift; sourceTree = "<group>"; };
+		5055B0631CD1A2B000E76204 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		5055B0641CD1A2B000E76204 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		5055B0651CD1A2B000E76204 /* YZDisplayTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZDisplayTitleLabel.h; sourceTree = "<group>"; };
+		5055B0661CD1A2B000E76204 /* YZDisplayTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZDisplayTitleLabel.m; sourceTree = "<group>"; };
+		5055B0671CD1A2B000E76204 /* YZDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZDisplayViewController.h; sourceTree = "<group>"; };
+		5055B0681CD1A2B000E76204 /* YZDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZDisplayViewController.m; sourceTree = "<group>"; };
+		5055B0691CD1A2B000E76204 /* YZDisplayViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZDisplayViewHeader.h; sourceTree = "<group>"; };
+		5055B06A1CD1A2B000E76204 /* YZFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZFlowLayout.h; sourceTree = "<group>"; };
+		5055B06B1CD1A2B000E76204 /* YZFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZFlowLayout.m; sourceTree = "<group>"; };
+		5055B0701CD1A3AB00E76204 /* TMallMenu_RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMallMenu_RootViewController.swift; sourceTree = "<group>"; };
 		5072935D1CCF47D4004B52EA /* MainVcSetting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVcSetting.json; sourceTree = "<group>"; };
 		507293621CCF6802004B52EA /* CAlamofireClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAlamofireClient.swift; sourceTree = "<group>"; };
 		60402CD21CD0F74000B0E1F0 /* TmallTooBarData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TmallTooBarData.json; sourceTree = "<group>"; };
@@ -204,9 +219,9 @@
 			children = (
 				504680121CCDFA4700F9B454 /* AppDelegate.swift */,
 				504680141CCDFA4700F9B454 /* ViewController.swift */,
+				504680161CCDFA4700F9B454 /* Main.storyboard */,
 				5007F0AF1CD08D7D009FF19B /* RRArt-Bridge.h */,
 				504680421CCE017A00F9B454 /* Classes */,
-				504680161CCDFA4700F9B454 /* Main.storyboard */,
 				504680191CCDFA4700F9B454 /* Assets.xcassets */,
 				5046801E1CCDFA4700F9B454 /* Info.plist */,
 				504680401CCDFC6100F9B454 /* Images.xcassets */,
@@ -250,6 +265,7 @@
 		504680431CCE01C700F9B454 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				5055B0621CD1A2B000E76204 /* YZDisplayViewController */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -298,7 +314,8 @@
 				60402CD11CD0F69600B0E1F0 /* TmallResource */,
 				5007F0BA1CD0A47D009FF19B /* TmallModels */,
 				5007F0B21CD09344009FF19B /* TmallView */,
-				504680571CCE054500F9B454 /* TMall_RootViewController.swift */,
+				504680571CCE054500F9B454 /* TMallHomeViewController.swift */,
+				5055B0701CD1A3AB00E76204 /* TMallMenu_RootViewController.swift */,
 			);
 			path = TMall;
 			sourceTree = "<group>";
@@ -309,6 +326,22 @@
 				504680591CCE055600F9B454 /* WebSchool_RootViewController.swift */,
 			);
 			path = WebSchool;
+			sourceTree = "<group>";
+		};
+		5055B0621CD1A2B000E76204 /* YZDisplayViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5055B0631CD1A2B000E76204 /* UIView+Frame.h */,
+				5055B0641CD1A2B000E76204 /* UIView+Frame.m */,
+				5055B0651CD1A2B000E76204 /* YZDisplayTitleLabel.h */,
+				5055B0661CD1A2B000E76204 /* YZDisplayTitleLabel.m */,
+				5055B0671CD1A2B000E76204 /* YZDisplayViewController.h */,
+				5055B0681CD1A2B000E76204 /* YZDisplayViewController.m */,
+				5055B0691CD1A2B000E76204 /* YZDisplayViewHeader.h */,
+				5055B06A1CD1A2B000E76204 /* YZFlowLayout.h */,
+				5055B06B1CD1A2B000E76204 /* YZFlowLayout.m */,
+			);
+			path = YZDisplayViewController;
 			sourceTree = "<group>";
 		};
 		5072935C1CCF47AD004B52EA /* Resource */ = {
@@ -545,18 +578,23 @@
 				504E69D21CD048BA002CB284 /* CAlamofireManager.swift in Sources */,
 				5046805A1CCE055600F9B454 /* WebSchool_RootViewController.swift in Sources */,
 				504680541CCE051C00F9B454 /* Lesson_RootViewController.swift in Sources */,
-				504680581CCE054500F9B454 /* TMall_RootViewController.swift in Sources */,
+				504680581CCE054500F9B454 /* TMallHomeViewController.swift in Sources */,
+				5055B06F1CD1A2B000E76204 /* YZFlowLayout.m in Sources */,
 				504680561CCE052F00F9B454 /* MyZone_RootViewController.swift in Sources */,
+				5055B06C1CD1A2B000E76204 /* UIView+Frame.m in Sources */,
 				60402CDB1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.swift in Sources */,
 				60402CD81CD0F7BB00B0E1F0 /* ApiConfig.swift in Sources */,
 				5007F0B41CD09383009FF19B /* BaseTableView.swift in Sources */,
 				507293631CCF6802004B52EA /* CAlamofireClient.swift in Sources */,
+				5055B06D1CD1A2B000E76204 /* YZDisplayTitleLabel.m in Sources */,
 				504680151CCDFA4700F9B454 /* ViewController.swift in Sources */,
 				5046805C1CCE05DC00F9B454 /* MainViewController.swift in Sources */,
 				5007F0B81CD09405009FF19B /* TMallHomeView.swift in Sources */,
 				504680131CCDFA4700F9B454 /* AppDelegate.swift in Sources */,
 				504680501CCE043800F9B454 /* BaseViewController.swift in Sources */,
 				5007F0B61CD093DA009FF19B /* BaseCollectionView.swift in Sources */,
+				5055B06E1CD1A2B000E76204 /* YZDisplayViewController.m in Sources */,
+				5055B0711CD1A3AB00E76204 /* TMallMenu_RootViewController.swift in Sources */,
 				5007F0BD1CD0A4EF009FF19B /* TMallModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

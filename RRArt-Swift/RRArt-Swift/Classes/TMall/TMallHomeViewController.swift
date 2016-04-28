@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TMall_RootViewController: BaseViewController {
+class TMallHomeViewController: BaseViewController {
     var tmallArray:[TMallModels]?{//数组保存
         didSet{
         //刷新表格
@@ -46,7 +46,7 @@ class TMall_RootViewController: BaseViewController {
         layout.minimumInteritemSpacing = 5
         layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5)
         
-        var tmallHome = TMallHomeView(frame: CGRectMake(0, 0, self.view.bounds.size.width,  self.view.bounds.size.height), collectionViewLayout: layout)
+        var tmallHome = TMallHomeView(frame: CGRectMake(0, 0, self.view.bounds.size.width,UIScreen.mainScreen().bounds.size.height-64-40-35), collectionViewLayout: layout)
         
         return tmallHome
     }()

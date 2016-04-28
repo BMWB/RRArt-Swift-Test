@@ -35,6 +35,7 @@ class CAlamofireManager: NSObject {
         CAlamofireClient.shareClient.dataRequest(method: .GET, urlString: getHttpRequestUrl(kShopProductsClassinfoUrl), parameter: params, complectionHandler: { (responseObject) in
             
             SVProgressHUD.showSuccessWithStatus("加载成功")
+            SVProgressHUD.dismissWithDelay(0.5)
             complectionHandler!(responseObject: responseObject!["ClassInfo"])
             
         }) { (error) in

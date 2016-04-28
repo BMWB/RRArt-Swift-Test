@@ -15,7 +15,7 @@
  "imageName":"xiadaohang_icon_wangxiao"
  },
  {
- "vcName":"TMall_RootViewController",
+ "vcName":"TMallMenu_RootViewController",
  "title":"商城",
  "imageName":"xiadaohang_icon_shangcheng"
  },

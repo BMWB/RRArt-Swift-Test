@@ -36,7 +36,7 @@ class MainViewController: UITabBarController {
                 addChildViewController("Comment_RootViewController", title: "点评", imageName: "tab_ques")
                 addChildViewController("Lesson_RootViewController", title: "精选", imageName: "xiadaohang_icon_kecheng")
                 addChildViewController("WebSchool_RootViewController", title: "网校", imageName: "xiadaohang_icon_wangxiao")
-                addChildViewController("TMall_RootViewController", title: "商城", imageName: "xiadaohang_icon_shangcheng")
+                addChildViewController("TMallMenu_RootViewController", title: "商城", imageName: "xiadaohang_icon_shangcheng")
                 addChildViewController("MyZone_RootViewController", title: "我的", imageName: "tab_me")
                 
             }
