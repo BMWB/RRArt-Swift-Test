@@ -8,6 +8,7 @@
 
 import UIKit
 
+//MARK: － 商城首页模型
 class TMallModels: NSObject{
     ///激活
     var Active :Int = 0
@@ -93,7 +94,7 @@ class TMallModels: NSObject{
     
 }
 
-
+//MARK: － 商城标题模型
 class CTmallHomeModel: NSObject {
     ///
     var Id :Int = 0

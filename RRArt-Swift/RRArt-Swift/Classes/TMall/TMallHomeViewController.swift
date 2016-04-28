@@ -33,10 +33,16 @@ class TMallHomeViewController: BaseViewController {
         
         view.addSubview(tmallHomeView)
         
+        //获取商城首页数据
         loadData()
+        
+        //跳转
+        tmallHomeView.clickTmallHomeItem {(tmall) in
+            debugPrint(tmall)
+        }
     }
     
-    //获取商城首页数据
+    //MARK: － 获取商城首页数据
     private func loadData(){
         
         CAlamofireManager.shareTools.tMallHomeDataRequest(nil,tmallModel: tmallModel!) { (responseObject) in
@@ -50,11 +56,11 @@ class TMallHomeViewController: BaseViewController {
         
     }
     
-    
+    //MARK: － 懒加载
     lazy var tmallHomeView:TMallHomeView = {
         
         var layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSizeMake((self.view.bounds.size.width-15)/2, (self.view.bounds.size.width-15)/2*1.3)
+        layout.itemSize = CGSizeMake((self.view.bounds.size.width-15)/2, (self.view.bounds.size.width-15)/2*1.2)
         layout.minimumLineSpacing = 5
         layout.minimumInteritemSpacing = 5
         layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5)

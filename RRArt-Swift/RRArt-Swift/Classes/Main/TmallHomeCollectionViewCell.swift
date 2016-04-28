@@ -16,8 +16,6 @@ class TmallHomeCollectionViewCell: UICollectionViewCell {
         didSet{
             headIcon.sd_setImageWithURL(NSURL(string:tmallItem!.Image ?? ""))
             
-            
-        
         }
     }
     

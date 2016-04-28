@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        //设置导航条和工具条的外观
+        UINavigationBar.appearance().tintColor = UIColor.orangeColor()
+        UITabBar.appearance().tintColor = UIColor.orangeColor()
+        
         //设置状态栏控制器
         topWindow = UIWindow(frame: application.statusBarFrame)
         topWindow?.hidden = false
