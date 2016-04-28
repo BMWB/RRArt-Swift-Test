@@ -9,11 +9,11 @@
 import UIKit
 import WebKit
 
-protocol WTJWebBrowserDelegate : NSObjectProtocol{
+@objc protocol WTJWebBrowserDelegate : NSObjectProtocol{
     
-   func webBrowserdidStartLoadingURL(webBrowser:UIViewController, Url:NSURL)
-   func webBrowserdidFinishLoadingURL(webBrowser:UIViewController, Url:NSURL)
-   func webBrowserdidFailToLoadURL(webBrowser:UIViewController, Url:NSURL)
+    optional func webBrowserdidStartLoadingURL(webBrowser:UIViewController, Url:NSURL)
+    optional func webBrowserdidFinishLoadingURL(webBrowser:UIViewController, Url:NSURL)
+    optional func webBrowserdidFailToLoadURL(webBrowser:UIViewController, Url:NSURL)
     
 }
 
@@ -21,7 +21,7 @@ protocol WTJWebBrowserDelegate : NSObjectProtocol{
 class WTJWebBrowserViewController: UIViewController {
     
     var wkWebView :WKWebView?
-    weak var wtjWebdelegate :WTJWebBrowserDelegate?
+    weak internal var wtjWebdelegate :WTJWebBrowserDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,17 +110,18 @@ extension WTJWebBrowserViewController:WKUIDelegate,WKNavigationDelegate{
     //MARK: -WKNavigationDelegate
     //开始加载
     func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        wtjWebdelegate?.webBrowserdidStartLoadingURL(self, Url: webView.URL!)
+       
+        wtjWebdelegate?.webBrowserdidStartLoadingURL!(self, Url: webView.URL!)
     }
     
     //加载完成
     func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
-        wtjWebdelegate?.webBrowserdidFinishLoadingURL(self, Url: webView.URL!)
+        wtjWebdelegate?.webBrowserdidFinishLoadingURL!(self, Url: webView.URL!)
     }
     
     //加载失败
     func webView(webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: NSError) {
-        wtjWebdelegate?.webBrowserdidFailToLoadURL(self, Url: webView.URL!)
+        wtjWebdelegate?.webBrowserdidFailToLoadURL!(self, Url: webView.URL!)
     }
     
     func webView(webView: WKWebView, didFailNavigation navigation: WKNavigation!, withError error: NSError) {

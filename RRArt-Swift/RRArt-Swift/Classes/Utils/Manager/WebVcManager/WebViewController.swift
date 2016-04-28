@@ -9,7 +9,7 @@
 import UIKit
 
 class WebViewController: WTJWebBrowserViewController{
-
+    
     var urlStr : String?
     
     init(url:String) {
@@ -30,17 +30,27 @@ class WebViewController: WTJWebBrowserViewController{
         }
         
     }
-
+    
 }
 
 extension WebViewController : WTJWebBrowserDelegate{
-
+    
     func webBrowserdidStartLoadingURL(webBrowser: UIViewController, Url: NSURL) {
-       
+        
     }
     
     func webBrowserdidFinishLoadingURL(webBrowser: UIViewController, Url: NSURL) {
-         print(Url.absoluteString)
+        
+        let icon = "var word = document.getElementById('downloadNav');"
+        let icon2 = "word.remove();"
+        let icon3 = "var change = document.getElementById('channelName');"
+        let icon4 = "change.innerHTML = '艺考通';"
+        
+        wkWebView?.evaluateJavaScript(icon, completionHandler: nil)
+        wkWebView?.evaluateJavaScript(icon2, completionHandler: nil)
+        wkWebView?.evaluateJavaScript(icon3, completionHandler: nil)
+        wkWebView?.evaluateJavaScript(icon4, completionHandler: nil)
+
     }
     
     func webBrowserdidFailToLoadURL(webBrowser: UIViewController, Url: NSURL) {
