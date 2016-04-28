@@ -9,7 +9,6 @@
 import UIKit
 import SVProgressHUD
 
-let kShopProductsClassinfoUrl =  "http://app.renrenmeishu.com:20100/v1/products/classinfo"
 
 private let instance = CAlamofireManager()
 
@@ -33,7 +32,7 @@ class CAlamofireManager: NSObject {
             }
         }
         
-        CAlamofireClient.shareClient.dataRequest(method: .GET, urlString: kShopProductsClassinfoUrl, parameter: params, complectionHandler: { (responseObject) in
+        CAlamofireClient.shareClient.dataRequest(method: .GET, urlString: getHttpRequestUrl(kShopProductsClassinfoUrl), parameter: params, complectionHandler: { (responseObject) in
             
             SVProgressHUD.showSuccessWithStatus("加载成功")
             complectionHandler!(responseObject: responseObject!["ClassInfo"])
@@ -44,6 +43,15 @@ class CAlamofireManager: NSObject {
             
             
         }
+        
+    }
+    
+    //MARK:获取http请求路径
+    
+    ///获取http请求路径
+    private func getHttpRequestUrl(url:String) -> String{
+    
+    return kBaseUrl + ":" + kPort20100 + url
         
     }
     
