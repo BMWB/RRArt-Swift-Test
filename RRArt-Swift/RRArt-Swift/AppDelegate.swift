@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //设置当前主控制器
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()
-        window?.rootViewController = NewfeatureCollectionViewController()
+        window?.rootViewController = defaultContoller()
         window?.makeKeyAndVisible()
         return true
     }
@@ -59,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     /**
-     用于获取界面
+     获取当前软件的版本号
      */
     
     private func isNewupDate() -> Bool{
@@ -75,13 +75,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSUserDefaults.standardUserDefaults().setObject(currentVersion, forKey: "CFBundleShortVersionString")
             return true
         }
-    
+        
         return false
     }
     
+    
+    /**
+     获取默认界面
+     */
     private func defaultContoller() -> UIViewController{
         
-        return MainViewController()
+       return  isNewupDate() ? NewfeatureCollectionViewController() : MainViewController()
+
     }
     
     
