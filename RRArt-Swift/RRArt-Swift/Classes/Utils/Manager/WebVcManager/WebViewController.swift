@@ -36,11 +36,10 @@ class WebViewController: WTJWebBrowserViewController{
 extension WebViewController : WTJWebBrowserDelegate{
     
     func webBrowserdidStartLoadingURL(webBrowser: UIViewController, Url: NSURL) {
-        
+       
     }
     
     func webBrowserdidFinishLoadingURL(webBrowser: UIViewController, Url: NSURL) {
-        
         let icon = "var word = document.getElementById('downloadNav');"
         let icon2 = "word.remove();"
         let icon3 = "var change = document.getElementById('channelName');"
@@ -50,7 +49,7 @@ extension WebViewController : WTJWebBrowserDelegate{
         wkWebView?.evaluateJavaScript(icon2, completionHandler: nil)
         wkWebView?.evaluateJavaScript(icon3, completionHandler: nil)
         wkWebView?.evaluateJavaScript(icon4, completionHandler: nil)
-
+        
     }
     
     func webBrowserdidFailToLoadURL(webBrowser: UIViewController, Url: NSURL) {

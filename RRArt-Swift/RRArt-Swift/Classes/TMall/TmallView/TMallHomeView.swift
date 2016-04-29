@@ -10,6 +10,7 @@ import UIKit
 
 ///商城首页点击回调闭包
 typealias TMallHomeClickHandler = (tmall:TMallModels?) -> Void
+private let tMallId = "tMallHomeViewCell"
 
 class TMallHomeView: BaseCollectionView{
     //在Swift 中，如果在某个类中定义一个属性，那么这个属性必须要初始化，负责会报错，

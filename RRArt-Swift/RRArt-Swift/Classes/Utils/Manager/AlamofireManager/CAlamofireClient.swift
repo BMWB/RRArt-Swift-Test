@@ -9,14 +9,12 @@
 import UIKit
 import Alamofire
 
-
 public enum HTTPRequestError: ErrorType {
     case None
     case SystemError(error: NSError?)
     case NetworkError
     case BusinessError(description: String)
 }
-
 
 public typealias HTTPRequestHandler = (responseObject: AnyObject?) -> Void
 public typealias HTTPReErrorHandler = (error: HTTPRequestError?) -> Void

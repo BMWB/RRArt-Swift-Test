@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-let tMallId = "tMallHomeViewCell"
+
 
 class TmallHomeCollectionViewCell: UICollectionViewCell {
     var tmallItem = TMallModels?(){

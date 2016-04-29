@@ -13,6 +13,7 @@
 		5007F0B61CD093DA009FF19B /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5007F0B51CD093DA009FF19B /* BaseCollectionView.swift */; };
 		5007F0B81CD09405009FF19B /* TMallHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5007F0B71CD09405009FF19B /* TMallHomeView.swift */; };
 		5007F0BD1CD0A4EF009FF19B /* TMallModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5007F0BC1CD0A4EF009FF19B /* TMallModels.swift */; };
+		503BF3611CD2EE86001D53A5 /* NewfeatureCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503BF3601CD2EE86001D53A5 /* NewfeatureCollectionViewController.swift */; };
 		504680131CCDFA4700F9B454 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504680121CCDFA4700F9B454 /* AppDelegate.swift */; };
 		504680151CCDFA4700F9B454 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504680141CCDFA4700F9B454 /* ViewController.swift */; };
 		504680181CCDFA4700F9B454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 504680161CCDFA4700F9B454 /* Main.storyboard */; };
@@ -82,6 +83,7 @@
 		5007F0B51CD093DA009FF19B /* BaseCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
 		5007F0B71CD09405009FF19B /* TMallHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMallHomeView.swift; sourceTree = "<group>"; };
 		5007F0BC1CD0A4EF009FF19B /* TMallModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMallModels.swift; sourceTree = "<group>"; };
+		503BF3601CD2EE86001D53A5 /* NewfeatureCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewfeatureCollectionViewController.swift; sourceTree = "<group>"; };
 		5046800F1CCDFA4700F9B454 /* RRArt-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RRArt-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		504680121CCDFA4700F9B454 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		504680141CCDFA4700F9B454 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +198,14 @@
 			path = TmallViewCell;
 			sourceTree = "<group>";
 		};
+		503BF35F1CD2EDF4001D53A5 /* Newfeature */ = {
+			isa = PBXGroup;
+			children = (
+				503BF3601CD2EE86001D53A5 /* NewfeatureCollectionViewController.swift */,
+			);
+			path = Newfeature;
+			sourceTree = "<group>";
+		};
 		504680061CCDFA4700F9B454 = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +264,7 @@
 		504680421CCE017A00F9B454 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				503BF35F1CD2EDF4001D53A5 /* Newfeature */,
 				5072935F1CCF656D004B52EA /* Utils */,
 				5046804A1CCE03A900F9B454 /* Comment */,
 				5046804B1CCE03A900F9B454 /* Lesson */,
@@ -614,6 +625,7 @@
 				504680151CCDFA4700F9B454 /* ViewController.swift in Sources */,
 				5046805C1CCE05DC00F9B454 /* MainViewController.swift in Sources */,
 				5007F0B81CD09405009FF19B /* TMallHomeView.swift in Sources */,
+				503BF3611CD2EE86001D53A5 /* NewfeatureCollectionViewController.swift in Sources */,
 				504680131CCDFA4700F9B454 /* AppDelegate.swift in Sources */,
 				504680501CCE043800F9B454 /* BaseViewController.swift in Sources */,
 				5007F0B61CD093DA009FF19B /* BaseCollectionView.swift in Sources */,

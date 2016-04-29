@@ -29,7 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //设置当前主控制器
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()
-        window?.rootViewController = MainViewController()
+        window?.rootViewController = NewfeatureCollectionViewController()
+//        window?.rootViewController = MainViewController()
         window?.makeKeyAndVisible()
         return true
     }
