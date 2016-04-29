@@ -8,6 +8,10 @@
 
 import UIKit
 
+//切换控制器通知
+let WTJSwitchRootViewcontrollerKey = "WTJSwitchRootViewcontrollerKey"
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -25,12 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         topWindow?.hidden = false
         topWindow?.windowLevel = UIWindowLevelAlert
         topWindow?.rootViewController = TopWindowViewController.singleInstance
-    
+        
         //设置当前主控制器
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()
         window?.rootViewController = NewfeatureCollectionViewController()
-//        window?.rootViewController = MainViewController()
         window?.makeKeyAndVisible()
         return true
     }
@@ -54,6 +57,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
+    
+    /**
+     用于获取界面
+     */
+    
+    private func isNewupDate() -> Bool{
+        //1、获取当前软件的版本号
+        let currentVersion = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
+        //2、获取以前的版本号
+        let sandboxVersion = NSUserDefaults.standardUserDefaults().objectForKey("CFBundleShortVersionString") as? String ?? ""
+        //3、比较当前版本号和以前版本号
+        
+        //降序比较
+        if currentVersion.compare(sandboxVersion) == NSComparisonResult.OrderedDescending {
+            //3.1存储当前版本号 ios7以后就不用同步啦
+            NSUserDefaults.standardUserDefaults().setObject(currentVersion, forKey: "CFBundleShortVersionString")
+            return true
+        }
+    
+        return false
+    }
+    
+    private func defaultContoller() -> UIViewController{
+        
+        return MainViewController()
+    }
+    
+    
+    func switchRootViewcontroller() -> Void {
+        window?.rootViewController = MainViewController()
+    }
     
 }
 

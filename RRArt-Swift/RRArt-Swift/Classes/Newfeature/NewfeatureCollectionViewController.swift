@@ -33,9 +33,6 @@ class NewfeatureCollectionViewController: UICollectionViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        //隐藏状态栏
-        TopWindowViewController.singleInstance.wtjHideStatusBar()
-        
     }
 }
 
@@ -110,8 +107,8 @@ class NewfeatureCell :UICollectionViewCell{
     }
     
     func startBtnClick() -> Void {
-        
-        print("-------")
+        (UIApplication.sharedApplication().delegate as! AppDelegate).switchRootViewcontroller()
+      
     }
     
     override init(frame: CGRect) {
