@@ -20,8 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        //添加更换根控制器监听
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.switchRootViewcontroller), name: WTJSwitchRootViewcontrollerKey, object: nil)
         
+        //设置3D Touch 的选项
         let firstItemIcon : UIApplicationShortcutIcon = UIApplicationShortcutIcon(type: .Share)
         let firstItem = UIMutableApplicationShortcutItem(type: "1", localizedTitle: "分享", localizedSubtitle: nil, icon: firstItemIcon, userInfo: nil)
         
@@ -29,7 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let twoItem = UIMutableApplicationShortcutItem(type: "2", localizedTitle: "编辑", localizedSubtitle: nil, icon: twoItemIcon, userInfo: nil)
         
         application.shortcutItems = [firstItem,twoItem]
-        
         
         //设置导航条和工具条的外观
         UINavigationBar.appearance().tintColor = UIColor.orangeColor()
@@ -90,6 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return handled
     
     }
+    
     /**
      获取默认界面
      */
