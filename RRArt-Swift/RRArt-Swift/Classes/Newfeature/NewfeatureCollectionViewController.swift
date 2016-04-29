@@ -107,7 +107,7 @@ class NewfeatureCell :UICollectionViewCell{
     }
     
     func startBtnClick() -> Void {
-        (UIApplication.sharedApplication().delegate as! AppDelegate).switchRootViewcontroller()
+       NSNotificationCenter.defaultCenter().postNotificationName("WTJSwitchRootViewcontrollerKey", object: nil)
       
     }
     

@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.switchRootViewcontroller), name: WTJSwitchRootViewcontrollerKey, object: nil)
+        
         //设置导航条和工具条的外观
         UINavigationBar.appearance().tintColor = UIColor.orangeColor()
         UITabBar.appearance().tintColor = UIColor.orangeColor()
@@ -57,41 +59,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
-    
-    /**
-     获取当前软件的版本号
-     */
-    
-    private func isNewupDate() -> Bool{
-        //1、获取当前软件的版本号
-        let currentVersion = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
-        //2、获取以前的版本号
-        let sandboxVersion = NSUserDefaults.standardUserDefaults().objectForKey("CFBundleShortVersionString") as? String ?? ""
-        //3、比较当前版本号和以前版本号
-        
-        //降序比较
-        if currentVersion.compare(sandboxVersion) == NSComparisonResult.OrderedDescending {
-            //3.1存储当前版本号 ios7以后就不用同步啦
-            NSUserDefaults.standardUserDefaults().setObject(currentVersion, forKey: "CFBundleShortVersionString")
-            return true
-        }
-        
-        return false
-    }
-    
-    
     /**
      获取默认界面
      */
     private func defaultContoller() -> UIViewController{
         
-       return  isNewupDate() ? NewfeatureCollectionViewController() : MainViewController()
+       return  CommonTool.isNewUpDate() ? NewfeatureCollectionViewController() : MainViewController()
 
     }
     
     
     func switchRootViewcontroller() -> Void {
         window?.rootViewController = MainViewController()
+    }
+    
+    deinit{
+    
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
 }
