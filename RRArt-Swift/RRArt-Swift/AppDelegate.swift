@@ -22,6 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.switchRootViewcontroller), name: WTJSwitchRootViewcontrollerKey, object: nil)
         
+        let firstItemIcon : UIApplicationShortcutIcon = UIApplicationShortcutIcon(type: .Share)
+        let firstItem = UIMutableApplicationShortcutItem(type: "1", localizedTitle: "分享", localizedSubtitle: nil, icon: firstItemIcon, userInfo: nil)
+        
+        let twoItemIcon : UIApplicationShortcutIcon = UIApplicationShortcutIcon(type: .Compose)
+        let twoItem = UIMutableApplicationShortcutItem(type: "2", localizedTitle: "编辑", localizedSubtitle: nil, icon: twoItemIcon, userInfo: nil)
+        
+        application.shortcutItems = [firstItem,twoItem]
+        
+        
         //设置导航条和工具条的外观
         UINavigationBar.appearance().tintColor = UIColor.orangeColor()
         UITabBar.appearance().tintColor = UIColor.orangeColor()
@@ -59,6 +68,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
+    func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+        
+        completionHandler(handledShortCutItem(shortcutItem))
+    }
+    
+    func handledShortCutItem(shortcutItem: UIApplicationShortcutItem) -> Bool{
+    
+        let handled = false
+        
+        
+        if shortcutItem.type == "1" {
+//            let rootNavigationViewController = window!.rootViewController as? UINavigationController
+            
+        }
+        
+        if shortcutItem.type == "2" {
+            
+        }
+        
+        return handled
+    
+    }
     /**
      获取默认界面
      */
