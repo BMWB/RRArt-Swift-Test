@@ -18,7 +18,7 @@ import WebKit
 }
 
 
-class WTJWebBrowserViewController: UIViewController {
+class WTJWebBrowserViewController: BaseViewController {
     
     var wkWebView :WKWebView?
     weak internal var wtjWebdelegate :WTJWebBrowserDelegate?

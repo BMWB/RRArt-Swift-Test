@@ -29,7 +29,6 @@ class TopWindowViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
     }
     
     //MARK:对外公开方法

@@ -40,21 +40,28 @@ class TMallHomeViewController: BaseViewController {
         tmallHomeView.clickTmallHomeItem {[unowned self](tmall) in
             debugPrint(tmall)
             let webVc = WebViewController(url: (tmall?.Url)!)
-           
+            
             self.navigationController!.pushViewController(webVc, animated: true)
         }
+        
+        
     }
     
     //MARK: －获取商城首页数据
     private func loadData(){
+        activityIndicatorView.startAnimation()
         
-        CAlamofireManager.shareTools.tMallHomeDataRequest(nil,tmallModel: tmallModel!) { (responseObject) in
+        CAlamofireManager.shareTools.tMallHomeDataRequest(nil, tmallModel: tmallModel!, complectionHandler: { (responseObject) in
             
             //字典转模型
             let models = TMallModels.objectArrayWithKeyValuesArray(responseObject as! [[String:AnyObject]])
             self.tmallArray = models
             debugPrint(models)
+            self.activityIndicatorView.stopAnimation()
             
+        }) { (error) in
+            
+            self.activityIndicatorView.stopAnimation()
         }
         
     }

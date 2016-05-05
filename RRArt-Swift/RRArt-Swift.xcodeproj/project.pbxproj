@@ -31,7 +31,12 @@
 		5046805C1CCE05DC00F9B454 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046805B1CCE05DC00F9B454 /* MainViewController.swift */; };
 		5046805E1CCE07BA00F9B454 /* TopWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046805D1CCE07BA00F9B454 /* TopWindowViewController.swift */; };
 		504680601CCE15B600F9B454 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046805F1CCE15B600F9B454 /* BaseNavigationViewController.swift */; };
+		504CFB711CDB1BF0003D60A6 /* MMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504CFB701CDB1BF0003D60A6 /* MMViewController.swift */; };
+		504CFB741CDB1DC3003D60A6 /* WTJConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504CFB731CDB1DC3003D60A6 /* WTJConfig.swift */; };
 		504E69D21CD048BA002CB284 /* CAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E69D11CD048BA002CB284 /* CAlamofireManager.swift */; };
+		505454F01CDB322400D21658 /* LessonHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505454EE1CDB322400D21658 /* LessonHomeTableViewCell.swift */; };
+		505454F11CDB322400D21658 /* LessonHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 505454EF1CDB322400D21658 /* LessonHomeTableViewCell.xib */; };
+		505454F41CDB3A6300D21658 /* LessonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505454F31CDB3A6300D21658 /* LessonModels.swift */; };
 		5055B06C1CD1A2B000E76204 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055B0641CD1A2B000E76204 /* UIView+Frame.m */; };
 		5055B06D1CD1A2B000E76204 /* YZDisplayTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055B0661CD1A2B000E76204 /* YZDisplayTitleLabel.m */; };
 		5055B06E1CD1A2B000E76204 /* YZDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055B0681CD1A2B000E76204 /* YZDisplayViewController.m */; };
@@ -41,6 +46,8 @@
 		5055B0761CD1EDDD00E76204 /* WTJWebBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055B0751CD1EDDD00E76204 /* WTJWebBrowserViewController.swift */; };
 		5072935E1CCF47D4004B52EA /* MainVcSetting.json in Resources */ = {isa = PBXBuildFile; fileRef = 5072935D1CCF47D4004B52EA /* MainVcSetting.json */; };
 		507293631CCF6802004B52EA /* CAlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507293621CCF6802004B52EA /* CAlamofireClient.swift */; };
+		50B2901E1CD8544B00477082 /* WTJRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B2901D1CD8544B00477082 /* WTJRefreshControl.swift */; };
+		50B290201CD855D800477082 /* WTJRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50B2901F1CD855D800477082 /* WTJRefreshView.xib */; };
 		60402CD81CD0F7BB00B0E1F0 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60402CD71CD0F7BB00B0E1F0 /* ApiConfig.swift */; };
 		60402CDB1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60402CD91CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.swift */; };
 		60402CDC1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60402CDA1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.xib */; };
@@ -108,7 +115,12 @@
 		5046805B1CCE05DC00F9B454 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5046805D1CCE07BA00F9B454 /* TopWindowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopWindowViewController.swift; sourceTree = "<group>"; };
 		5046805F1CCE15B600F9B454 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		504CFB701CDB1BF0003D60A6 /* MMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMViewController.swift; sourceTree = "<group>"; };
+		504CFB731CDB1DC3003D60A6 /* WTJConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTJConfig.swift; sourceTree = "<group>"; };
 		504E69D11CD048BA002CB284 /* CAlamofireManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAlamofireManager.swift; sourceTree = "<group>"; };
+		505454EE1CDB322400D21658 /* LessonHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonHomeTableViewCell.swift; sourceTree = "<group>"; };
+		505454EF1CDB322400D21658 /* LessonHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LessonHomeTableViewCell.xib; sourceTree = "<group>"; };
+		505454F31CDB3A6300D21658 /* LessonModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonModels.swift; sourceTree = "<group>"; };
 		5055B0631CD1A2B000E76204 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		5055B0641CD1A2B000E76204 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		5055B0651CD1A2B000E76204 /* YZDisplayTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZDisplayTitleLabel.h; sourceTree = "<group>"; };
@@ -123,6 +135,8 @@
 		5055B0751CD1EDDD00E76204 /* WTJWebBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTJWebBrowserViewController.swift; sourceTree = "<group>"; };
 		5072935D1CCF47D4004B52EA /* MainVcSetting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVcSetting.json; sourceTree = "<group>"; };
 		507293621CCF6802004B52EA /* CAlamofireClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAlamofireClient.swift; sourceTree = "<group>"; };
+		50B2901D1CD8544B00477082 /* WTJRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTJRefreshControl.swift; sourceTree = "<group>"; };
+		50B2901F1CD855D800477082 /* WTJRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTJRefreshView.xib; sourceTree = "<group>"; };
 		60402CD71CD0F7BB00B0E1F0 /* ApiConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
 		60402CD91CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TmallHomeCollectionViewCell.swift; path = "RRArt-Swift/Classes/Main/TmallHomeCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		60402CDA1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TmallHomeCollectionViewCell.xib; path = "RRArt-Swift/Classes/Main/TmallHomeCollectionViewCell.xib"; sourceTree = SOURCE_ROOT; };
@@ -212,6 +226,8 @@
 			isa = PBXGroup;
 			children = (
 				503BF3631CD32FB3001D53A5 /* CommonTool.swift */,
+				50B2901D1CD8544B00477082 /* WTJRefreshControl.swift */,
+				50B2901F1CD855D800477082 /* WTJRefreshView.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -274,6 +290,7 @@
 		504680421CCE017A00F9B454 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				504CFB6C1CDB1B3D003D60A6 /* Drawer */,
 				503BF35F1CD2EDF4001D53A5 /* Newfeature */,
 				5072935F1CCF656D004B52EA /* Utils */,
 				5046804A1CCE03A900F9B454 /* Comment */,
@@ -321,6 +338,8 @@
 		5046804B1CCE03A900F9B454 /* Lesson */ = {
 			isa = PBXGroup;
 			children = (
+				505454F21CDB39DA00D21658 /* Model */,
+				505454ED1CDB2DFA00D21658 /* View */,
 				504680531CCE051C00F9B454 /* Lesson_RootViewController.swift */,
 			);
 			path = Lesson;
@@ -352,6 +371,39 @@
 				504680591CCE055600F9B454 /* WebSchool_RootViewController.swift */,
 			);
 			path = WebSchool;
+			sourceTree = "<group>";
+		};
+		504CFB6C1CDB1B3D003D60A6 /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				504CFB701CDB1BF0003D60A6 /* MMViewController.swift */,
+			);
+			path = Drawer;
+			sourceTree = "<group>";
+		};
+		504CFB721CDB1D91003D60A6 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				504CFB731CDB1DC3003D60A6 /* WTJConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		505454ED1CDB2DFA00D21658 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				505454EE1CDB322400D21658 /* LessonHomeTableViewCell.swift */,
+				505454EF1CDB322400D21658 /* LessonHomeTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		505454F21CDB39DA00D21658 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				505454F31CDB3A6300D21658 /* LessonModels.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5055B0621CD1A2B000E76204 /* YZDisplayViewController */ = {
@@ -389,6 +441,7 @@
 		5072935F1CCF656D004B52EA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				504CFB721CDB1D91003D60A6 /* Config */,
 				503BF3621CD32F56001D53A5 /* Common */,
 				507293601CCF65CD004B52EA /* Manager */,
 			);
@@ -542,6 +595,8 @@
 				5046801A1CCDFA4700F9B454 /* Assets.xcassets in Resources */,
 				60402CDC1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.xib in Resources */,
 				5055B0731CD1B7B500E76204 /* TmallTooBarData.json in Resources */,
+				505454F11CDB322400D21658 /* LessonHomeTableViewCell.xib in Resources */,
+				50B290201CD855D800477082 /* WTJRefreshView.xib in Resources */,
 				5072935E1CCF47D4004B52EA /* MainVcSetting.json in Resources */,
 				504680181CCDFA4700F9B454 /* Main.storyboard in Resources */,
 			);
@@ -616,6 +671,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504CFB741CDB1DC3003D60A6 /* WTJConfig.swift in Sources */,
+				504CFB711CDB1BF0003D60A6 /* MMViewController.swift in Sources */,
 				504680601CCE15B600F9B454 /* BaseNavigationViewController.swift in Sources */,
 				5046805E1CCE07BA00F9B454 /* TopWindowViewController.swift in Sources */,
 				504680521CCE04FE00F9B454 /* Comment_RootViewController.swift in Sources */,
@@ -626,8 +683,10 @@
 				504680581CCE054500F9B454 /* TMallHomeViewController.swift in Sources */,
 				5055B06F1CD1A2B000E76204 /* YZFlowLayout.m in Sources */,
 				504680561CCE052F00F9B454 /* MyZone_RootViewController.swift in Sources */,
+				505454F41CDB3A6300D21658 /* LessonModels.swift in Sources */,
 				5055B06C1CD1A2B000E76204 /* UIView+Frame.m in Sources */,
 				60402CE11CD247AB00B0E1F0 /* WebViewController.swift in Sources */,
+				50B2901E1CD8544B00477082 /* WTJRefreshControl.swift in Sources */,
 				60402CDB1CD0FD3B00B0E1F0 /* TmallHomeCollectionViewCell.swift in Sources */,
 				60402CD81CD0F7BB00B0E1F0 /* ApiConfig.swift in Sources */,
 				5007F0B41CD09383009FF19B /* BaseTableView.swift in Sources */,
@@ -637,6 +696,7 @@
 				5046805C1CCE05DC00F9B454 /* MainViewController.swift in Sources */,
 				5007F0B81CD09405009FF19B /* TMallHomeView.swift in Sources */,
 				503BF3611CD2EE86001D53A5 /* NewfeatureCollectionViewController.swift in Sources */,
+				505454F01CDB322400D21658 /* LessonHomeTableViewCell.swift in Sources */,
 				504680131CCDFA4700F9B454 /* AppDelegate.swift in Sources */,
 				504680501CCE043800F9B454 /* BaseViewController.swift in Sources */,
 				5007F0B61CD093DA009FF19B /* BaseCollectionView.swift in Sources */,

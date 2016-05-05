@@ -31,6 +31,8 @@ class TMallHomeView: BaseCollectionView{
         dataSource = self;
         
         registerNib(UINib(nibName: "TmallHomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: tMallId)
+        
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -85,11 +85,17 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/Alamofire.framework"
+  install_framework "Pods/MMDrawerController.framework"
+  install_framework "Pods/NVActivityIndicatorView.framework"
   install_framework "Pods/SDWebImage.framework"
-  install_framework "Pods/SVProgressHUD.framework"
+  install_framework "Pods/SnapKit.framework"
+  install_framework "Pods/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/Alamofire.framework"
+  install_framework "Pods/MMDrawerController.framework"
+  install_framework "Pods/NVActivityIndicatorView.framework"
   install_framework "Pods/SDWebImage.framework"
-  install_framework "Pods/SVProgressHUD.framework"
+  install_framework "Pods/SnapKit.framework"
+  install_framework "Pods/SwiftyJSON.framework"
 fi

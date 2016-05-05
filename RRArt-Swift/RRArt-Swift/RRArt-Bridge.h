@@ -9,8 +9,9 @@
 #ifndef RRArt_Bridge_h
 #define RRArt_Bridge_h
 
-#import "YZDisplayViewHeader.h"
 #endif /* RRArt_Bridge_h */
+
+#import "YZDisplayViewHeader.h"
 
 #define kScreen_Bounds [UIScreen mainScreen].bounds
 #define kScreen_Height [UIScreen mainScreen].bounds.size.height
