@@ -36,17 +36,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.orangeColor()
         UITabBar.appearance().tintColor = UIColor.orangeColor()
         
-        //设置状态栏控制器
-        topWindow = UIWindow(frame: application.statusBarFrame)
-        topWindow?.hidden = false
-        topWindow?.windowLevel = UIWindowLevelAlert
-        topWindow?.rootViewController = TopWindowViewController.singleInstance
-        
         //设置当前主控制器
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()
         window?.rootViewController = defaultContoller()
         window?.makeKeyAndVisible()
+        
+        //设置状态栏控制器
+        topWindow = UIWindow(frame: application.statusBarFrame)
+        topWindow?.hidden = false
+        topWindow?.windowLevel = UIWindowLevelAlert
+        topWindow?.rootViewController = TopWindowViewController.singleInstance
+
         return true
     }
     
@@ -97,13 +98,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      */
     private func defaultContoller() -> UIViewController{
         
-       return  CommonTool.isNewUpDate() ? NewfeatureCollectionViewController() : MainViewController()
+       return  CommonTool.isNewUpDate() ? NewfeatureCollectionViewController() : MMViewController()
 
     }
     
     
     func switchRootViewcontroller() -> Void {
-        window?.rootViewController = MainViewController()
+        window?.rootViewController = MMViewController()
     }
     
     deinit{

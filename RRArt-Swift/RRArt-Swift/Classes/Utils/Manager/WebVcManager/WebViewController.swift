@@ -36,14 +36,15 @@ class WebViewController: WTJWebBrowserViewController{
 extension WebViewController : WTJWebBrowserDelegate{
     
     func webBrowserdidStartLoadingURL(webBrowser: UIViewController, Url: NSURL) {
-       
+       activityIndicatorView.startAnimation()
     }
     
     func webBrowserdidFinishLoadingURL(webBrowser: UIViewController, Url: NSURL) {
+         activityIndicatorView.stopAnimation()
         let icon = "var word = document.getElementById('downloadNav');"
         let icon2 = "word.remove();"
         let icon3 = "var change = document.getElementById('channelName');"
-        let icon4 = "change.innerHTML = '艺考通';"
+        let icon4 = "change.innerHTML = '人人热闻';"
         
         wkWebView?.evaluateJavaScript(icon, completionHandler: nil)
         wkWebView?.evaluateJavaScript(icon2, completionHandler: nil)
