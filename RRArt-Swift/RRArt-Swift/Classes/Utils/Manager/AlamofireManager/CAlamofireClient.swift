@@ -75,7 +75,8 @@ public class CAlamofireClient:NSObject{
                 }else{
                     if let handler = errorHandler {
                         
-                        handler(error: HTTPRequestError.BusinessError(description: (dict["code"] as! String)))
+                        
+                        handler(error: HTTPRequestError.BusinessError(description: "\(dict["code"] as! Int)"))
                     }
                     
                 }

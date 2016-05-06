@@ -8,6 +8,7 @@
 
 import UIKit
 
+public typealias LessonRequestHandler = (type: Int,res: AnyObject?) -> Void
 
 private let instance = CAlamofireManager()
 
@@ -95,6 +96,49 @@ class CAlamofireManager: NSObject {
         }) { (error) in
             print(error)
            
+        }
+    }
+    
+    /**
+     请求详细数据
+     */
+    
+    func lessonDetailRequestData(channel:LessonModels,complectionHandler: LessonRequestHandler?,faile:HTTPReErrorHandler?) -> Void {
+        
+        var pathUrl = ""
+        
+        switch channel.Type {
+        case 1: pathUrl = getHttpRequestUrl(kLessonVideosListUrl)
+        case 2: pathUrl = getHttpRequestUrl(kLessonArticlesListUrl)
+        case 3: pathUrl = getHttpRequestUrl(kLessonImagesListUrl)
+        default:break
+            
+        }
+        
+        let params = ["limit":-1,"sortby":"Sortid","order":"desc"]
+        
+        CAlamofireClient.shareClient.dataRequest(method: .GET, urlString: (pathUrl + "?token=\("")&query=Channelid:\(channel.Id)"), parameter: params, complectionHandler: { (responseObject) in
+            
+            if let rep = responseObject!["VideoList"] as?  [[String:AnyObject]]{
+            
+                complectionHandler!(type: 1,res: rep)
+               
+                
+            }else if let rep = responseObject!["ActicleInfo"] as?  [[String:AnyObject]]{
+             
+                complectionHandler!(type: 2,res: rep)
+            
+            }else if let rep = responseObject!["ImageList"] as?  [[String:AnyObject]]{
+              
+                 complectionHandler!(type: 3,res: rep)
+            }else{
+                faile!(error: nil)
+            }
+            
+            
+            }) { (error) in
+                faile!(error: error)
+
         }
     }
     

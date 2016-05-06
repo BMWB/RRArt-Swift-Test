@@ -14,12 +14,12 @@ class Lesson_RootViewController: BaseViewController {
     var orglist : COrgListModels!
     var lessonHomeArray :[LessonModels]?{
         didSet{
-        
+            
             lessonHomeTableView.reloadData()
         }
-    
+        
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.orangeColor()
@@ -27,23 +27,39 @@ class Lesson_RootViewController: BaseViewController {
         navigationItem.title = orglist.Name
         loadData()
     }
-
-    private func loadData(){
     
+    private func loadData(){
+        
         CAlamofireManager.shareTools.lessonHomeDataRequest(nil, orglist: orglist, complectionHandler: { (responseObject) in
             
-                       
+            
             let models = LessonModels.objectArrayWithKeyValuesArray(responseObject as! [[String:AnyObject]])
             
             self.lessonHomeArray = models
             
-            }) { (error) in
-                
+        }) { (error) in
+            
         }   }
     
-    lazy var  lessonHomeTableView :BaseTableView = {
+    private func lessonDetailType(channel:LessonModels){
+        CAlamofireManager.shareTools.lessonDetailRequestData(channel, complectionHandler: { (type, res) in
+            
+//            switch type
+//            case 1:
+//            
+//            case 2:
+//            case 3:
+//            default:
+//            break
+            
+        }) { (error) in
+            
+        }
+    }
     
-        let tableView = BaseTableView(frame:self.view.bounds, style: UITableViewStyle.Plain) 
+    lazy var  lessonHomeTableView :BaseTableView = {
+        
+        let tableView = BaseTableView(frame:self.view.bounds, style: UITableViewStyle.Plain)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.registerNib(UINib(nibName:"LessonHomeTableViewCell" ,bundle: nil), forCellReuseIdentifier: cellID)
@@ -52,19 +68,30 @@ class Lesson_RootViewController: BaseViewController {
     }()
 }
 
-extension Lesson_RootViewController:UITableViewDelegate,UITableViewDataSource{
-
+extension Lesson_RootViewController:UITableViewDataSource{
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lessonHomeArray?.count ?? 0
     }
-
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let  cell = tableView.dequeueReusableCellWithIdentifier(cellID) as! LessonHomeTableViewCell
-    
+        
         let model = lessonHomeArray![indexPath.row]
         cell.lessonHome = model
         
         return cell
     }
+}
+
+extension Lesson_RootViewController :UITableViewDelegate{
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let  lesson = lessonHomeArray![indexPath.row]
+        
+        self.lessonDetailType(lesson)
+        
+    }
+    
 }

@@ -16,6 +16,7 @@ class MyZone_RootViewController: BaseViewController {
     
     @IBOutlet weak var footerView: UIView!
     
+    @IBOutlet weak var headImage: UIButton!
     
     @IBOutlet weak var myZoneTabView: UITableView!
     
@@ -60,6 +61,9 @@ class MyZone_RootViewController: BaseViewController {
 
         
         selectBtn.buttonTitleWithImageAlignment = UIButtonTitleWithImageAlignmentUp
+        
+        headImage.layer.masksToBounds = true
+        headImage.layer.cornerRadius = headImage.bounds.size.height/2
     }
     
     private func  loadData(){
