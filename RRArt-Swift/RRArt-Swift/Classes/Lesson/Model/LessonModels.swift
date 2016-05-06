@@ -64,6 +64,34 @@ class COrgListModels: NSObject {
     
     ///标题
     var Title : String?
-
     
+    init(dict:[String:AnyObject]) {
+        super.init()
+        setValuesForKeysWithDictionary(dict)
+    }
+
+    class func objectArrayWithKeyValuesArray(list:[[String:AnyObject]]) -> [COrgListModels] {
+        var models = [COrgListModels]()
+        
+        for dict in  list {
+        
+            models.append(COrgListModels(dict:dict))
+        }
+        
+        return models
+    }
+    
+    //属性没有一一对应，就会进这个方法，然后程序也不会挂掉
+    override func setValue(value: AnyObject?, forUndefinedKey key: String) {
+        
+    }
+    
+    //打印当前模型
+    var properties = ["Id","Cover","Description","Code","Name","Sortid","View","Title"]
+    
+    override var description: String{
+        let dict = dictionaryWithValuesForKeys(properties)
+        return "\(dict)"
+    }
+
 }

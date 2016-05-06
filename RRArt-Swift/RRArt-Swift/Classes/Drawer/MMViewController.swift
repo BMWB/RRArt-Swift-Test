@@ -9,6 +9,9 @@
 import UIKit
 import MMDrawerController
 
+let MMLeftVc_width = kScreen_Width - 200
+
+
 class MMViewController: MMDrawerController {
 
     override func viewDidLoad() {
@@ -17,7 +20,7 @@ class MMViewController: MMDrawerController {
         let leftVC   = MyZone_RootViewController()
         centerViewController = centerVc
         leftDrawerViewController = leftVC
-        maximumLeftDrawerWidth = kScreen_Width
+        maximumLeftDrawerWidth = MMLeftVc_width
         shouldStretchDrawer = false
         
         openDrawerGestureModeMask = MMOpenDrawerGestureMode.All

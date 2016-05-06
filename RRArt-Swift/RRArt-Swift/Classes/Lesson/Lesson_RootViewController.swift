@@ -11,14 +11,15 @@ import UIKit
 private let cellID = "Lesson_RootViewController"
 
 class Lesson_RootViewController: BaseViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.orangeColor()
         view.addSubview(lessonHomeTableView)
-        
+       
     }
-    
+
+      
     
     lazy var  lessonHomeTableView :BaseTableView = {
     
