@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LessonModels: NSObject {
+class LessonModels: BaseModel {
     ///
     var Id :Int = 0
     
@@ -42,9 +42,28 @@ class LessonModels: NSObject {
     ///观看数
     var View :Int = 0
     
+    class func objectArrayWithKeyValuesArray(list:[[String:AnyObject]]) -> [LessonModels] {
+        var models = [LessonModels]()
+        
+        for dict in  list {
+            
+            models.append(LessonModels(dict:dict))
+        }
+        
+        return models
+    }
+
+    
+    //打印当前模型
+    var properties = ["Id","Cover","Description","Orgid","Preview","Price","Title","Viplevel","View"]
+    
+    override var description: String{
+        let dict = dictionaryWithValuesForKeys(properties)
+        return "\(dict)"
+    }
 }
 
-class COrgListModels: NSObject {
+class COrgListModels: BaseModel {
     ///
     var Id :Int = 0
     
@@ -64,6 +83,24 @@ class COrgListModels: NSObject {
     
     ///标题
     var Title : String?
-
     
+    class func objectArrayWithKeyValuesArray(list:[[String:AnyObject]]) -> [COrgListModels] {
+        var models = [COrgListModels]()
+        
+        for dict in  list {
+            
+            models.append(COrgListModels(dict:dict))
+        }
+        
+        return models
+    }
+  
+    //打印当前模型
+    var properties = ["Id","Cover","Description","Code","Name","Sortid","View","Title"]
+    
+    override var description: String{
+        let dict = dictionaryWithValuesForKeys(properties)
+        return "\(dict)"
+    }
+
 }

@@ -8,44 +8,105 @@
 
 import UIKit
 
-private let cellID = "MyZone_RootViewController"
-class MyZone_RootViewController: BaseViewController {
+private let cellID = "MyZoneleftCell"
 
+class MyZone_RootViewController: BaseViewController {
+    
+    @IBOutlet weak var headerView: UIView!
+    
+    @IBOutlet weak var footerView: UIView!
+    
+    
+    @IBOutlet weak var myZoneTabView: UITableView!
+    
+    @IBOutlet weak var selectBtn: ImageTextButton!
+    
+    weak var mainVC : MMViewController!
+    
+    var myZoneArray :[COrgListModels]?{
+        didSet{
+            myZoneTabView.reloadData()
+            
+            /// 默认选择第0个
+            let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+            myZoneTabView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: .None)
+        }
+        
+    }
+    
+    @IBAction func loginMth(sender: AnyObject) {
+        
+        debugPrint("点击登录")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(MyZoneTableView)
-    }
-
-    lazy var  MyZoneTableView :BaseTableView = {
+        setTablvView()
+        loadData()
         
-        let tableView = BaseTableView(frame:self.view.bounds, style: UITableViewStyle.Plain)
-        tableView.dataSource = self
-        tableView.delegate = self
-//        tableView.registerNib(UINib(nibName:"LessonHomeTableViewCell" ,bundle: nil), forCellReuseIdentifier: cellID)
-//        tableView.rowHeight = 118
-        return tableView
-    }()
+    }
+    
+    func setTablvView()  {
+        headerView.backgroundColor = WTJRGB(35, 42, 48)
+        footerView.backgroundColor = WTJRGB(35, 42, 48)
+        
+        myZoneTabView.dataSource = self
+        myZoneTabView.delegate = self
+        myZoneTabView.backgroundColor = WTJRGB(35, 42, 48)
+        myZoneTabView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        //去掉下部空白格
+        myZoneTabView.tableFooterView = UIView()
 
+        
+        selectBtn.buttonTitleWithImageAlignment = UIButtonTitleWithImageAlignmentUp
+    }
+    
+    private func  loadData(){
+        
+        CAlamofireManager.shareTools.lessonOrgsListRequestData { (responseObject) in
+            
+            let models = COrgListModels.objectArrayWithKeyValuesArray(responseObject as! [[String:AnyObject]])
+            
+            
+            self.myZoneArray = models
+            debugPrint(models)
+            
+        }
+        
+    }
     
 }
 
-extension MyZone_RootViewController:UITableViewDelegate,UITableViewDataSource{
+extension MyZone_RootViewController:UITableViewDataSource{
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        return self.myZoneArray?.count ?? 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var  cell = tableView.dequeueReusableCellWithIdentifier(cellID)
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellID) as! MyZone_leftCell
         
-        if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellID)
-            cell!.accessoryType = UITableViewCellAccessoryType.Checkmark
-        }
+        let myzone = self.myZoneArray![indexPath.row]
+        cell.org = myzone
+        return cell
+    }
+    
+}
+
+
+extension MyZone_RootViewController:UITableViewDelegate{
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        cell?.textLabel?.text = "王天骥"
-        return cell!
+        let myzone = self.myZoneArray![indexPath.row]
+        
+        let centerVc = Lesson_RootViewController()
+        centerVc.orglist = myzone
+        let centerNav = BaseNavigationViewController(rootViewController: centerVc)
+        
+        print(self.mainVC)
+        self.mainVC.setCenterViewController(centerNav, withCloseAnimation: true, completion: nil)
     }
 }

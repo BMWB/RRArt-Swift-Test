@@ -14,29 +14,33 @@
                 <rect key="frame" x="0.0" y="0.0" width="356" height="110"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qs-WT-fFu">
-                        <rect key="frame" x="16" y="16" width="110" height="78"/>
-                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qs-WT-fFu">
+                        <rect key="frame" x="16" y="8" width="130" height="94"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="110" id="7wz-VE-ZeD"/>
+                            <constraint firstAttribute="width" constant="130" id="7wz-VE-ZeD"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3q-24-BAR">
-                        <rect key="frame" x="160" y="20" width="175" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3q-24-BAR">
+                        <rect key="frame" x="182" y="18" width="158" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iNc-bb-aSt">
-                        <rect key="frame" x="139" y="21" width="16" height="16"/>
-                        <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kecheng_icon_wenzhang" translatesAutoresizingMaskIntoConstraints="NO" id="iNc-bb-aSt">
+                        <rect key="frame" x="159" y="21" width="13" height="12"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="16" id="GHf-Pk-uiB"/>
                             <constraint firstAttribute="height" constant="16" id="Zua-9C-NTD"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GHf-Pk-uiB"/>
+                                <exclude reference="Zua-9C-NTD"/>
+                            </mask>
+                        </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s97-Gn-8if">
-                        <rect key="frame" x="134" y="43" width="209" height="17"/>
+                        <rect key="frame" x="159" y="46" width="184" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -45,16 +49,22 @@
                 <constraints>
                     <constraint firstItem="iNc-bb-aSt" firstAttribute="leading" secondItem="3qs-WT-fFu" secondAttribute="trailing" constant="13" id="6GW-7d-EFK"/>
                     <constraint firstItem="iNc-bb-aSt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="13" id="D6t-we-RfJ"/>
+                    <constraint firstItem="N3q-24-BAR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="DDU-Gq-oFR"/>
                     <constraint firstAttribute="trailingMargin" secondItem="s97-Gn-8if" secondAttribute="trailing" constant="5" id="IDx-hH-fGx"/>
                     <constraint firstItem="N3q-24-BAR" firstAttribute="centerY" secondItem="iNc-bb-aSt" secondAttribute="centerY" id="Ieh-k3-bpN"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="3qs-WT-fFu" secondAttribute="bottom" constant="8" id="JxM-R5-LKL"/>
-                    <constraint firstItem="3qs-WT-fFu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="bZK-Oh-iXV"/>
-                    <constraint firstItem="N3q-24-BAR" firstAttribute="leading" secondItem="iNc-bb-aSt" secondAttribute="trailing" constant="5" id="csO-KE-Dhx"/>
-                    <constraint firstItem="s97-Gn-8if" firstAttribute="leading" secondItem="3qs-WT-fFu" secondAttribute="trailing" constant="8" id="sj5-gR-VAO"/>
-                    <constraint firstItem="s97-Gn-8if" firstAttribute="top" secondItem="N3q-24-BAR" secondAttribute="bottom" constant="5" id="uPN-K0-I4w"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="N3q-24-BAR" secondAttribute="trailing" constant="13" id="vSM-hS-U2h"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="3qs-WT-fFu" secondAttribute="bottom" id="JxM-R5-LKL"/>
+                    <constraint firstItem="3qs-WT-fFu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="bZK-Oh-iXV"/>
+                    <constraint firstItem="N3q-24-BAR" firstAttribute="leading" secondItem="iNc-bb-aSt" secondAttribute="trailing" constant="10" id="csO-KE-Dhx"/>
+                    <constraint firstItem="s97-Gn-8if" firstAttribute="leading" secondItem="3qs-WT-fFu" secondAttribute="trailing" constant="13" id="sj5-gR-VAO"/>
+                    <constraint firstItem="s97-Gn-8if" firstAttribute="top" secondItem="N3q-24-BAR" secondAttribute="bottom" constant="10" id="uPN-K0-I4w"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="N3q-24-BAR" secondAttribute="trailing" constant="8" id="vSM-hS-U2h"/>
                     <constraint firstItem="3qs-WT-fFu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="w3C-69-ty0"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Ieh-k3-bpN"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="headImage" destination="3qs-WT-fFu" id="QaC-sH-pbB"/>
@@ -65,4 +75,7 @@
             <point key="canvasLocation" x="255" y="488.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="kecheng_icon_wenzhang" width="13" height="12"/>
+    </resources>
 </document>

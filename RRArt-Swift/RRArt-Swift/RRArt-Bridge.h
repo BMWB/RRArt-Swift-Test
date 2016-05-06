@@ -12,6 +12,7 @@
 #endif /* RRArt_Bridge_h */
 
 #import "YZDisplayViewHeader.h"
+#import "ImageTextButton.h"
 
 #define kScreen_Bounds [UIScreen mainScreen].bounds
 #define kScreen_Height [UIScreen mainScreen].bounds.size.height

@@ -70,7 +70,6 @@ public class CAlamofireClient:NSObject{
                 if (dict["code"] as! Int) == 200{
                     if let handler = complectionHandler {
                         handler(responseObject: resp.result.value)
-                        
                     }
                     
                 }else{

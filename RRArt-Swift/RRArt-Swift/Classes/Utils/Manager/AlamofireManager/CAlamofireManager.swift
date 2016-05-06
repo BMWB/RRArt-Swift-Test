@@ -23,7 +23,7 @@ class CAlamofireManager: NSObject {
      商城首页数据
      */
     func tMallHomeDataRequest(param:[String:AnyObject]?,tmallModel:CTmallHomeModel,complectionHandler: HTTPRequestHandler?,faile:HTTPReErrorHandler?) -> Void {
-       
+        
         var params = ["limit":20,"sortby":"Sortid","order":"desc"]
         if param != nil{
             for (key,value) in param! {
@@ -33,7 +33,13 @@ class CAlamofireManager: NSObject {
         
         CAlamofireClient.shareClient.dataRequest(method: .GET, urlString: getHttpRequestUrl(tmallModel.Url!), parameter: params, complectionHandler: { (responseObject) in
             
-                       complectionHandler!(responseObject: responseObject![(tmallModel.key! ) ])
+            if let rep =  responseObject![(tmallModel.key! )] as?  [[String:AnyObject]] {
+                
+                complectionHandler!(responseObject:rep)
+                
+            }else{
+                faile!(error: nil)
+            }
             
         }) { (error) in
             print(error)
@@ -47,7 +53,7 @@ class CAlamofireManager: NSObject {
      精选首页
      */
     
-    func lessonHomeDataRequest(param:[String:AnyObject]?,complectionHandler: HTTPRequestHandler?,faile:HTTPReErrorHandler?) -> Void {
+    func lessonHomeDataRequest(param:[String:AnyObject]?,orglist:COrgListModels,complectionHandler: HTTPRequestHandler?,faile:HTTPReErrorHandler?) -> Void {
         var params = ["limit":20,"sortby":"Sortid","order":"desc"]
         if param != nil{
             for (key,value) in param! {
@@ -55,26 +61,40 @@ class CAlamofireManager: NSObject {
             }
         }
         
-        CAlamofireClient.shareClient.dataRequest(method: .GET, urlString: getHttpRequestUrl(kLessonChannelsUrl), parameter: params, complectionHandler: { (responseObject) in
+        CAlamofireClient.shareClient.dataRequest(method: .GET, urlString: (getHttpRequestUrl(kLessonChannelsUrl) + "?query=Orgid:" + "\(orglist.Id)"), parameter: params, complectionHandler: { (responseObject) in
             
-            }) { (error) in
+            if let rep = responseObject!["ChannelList"] as? [[String:AnyObject]] {
+                complectionHandler!(responseObject:rep)
                 
+            }else{
+                
+                faile!(error: nil)
+            }
+            
+        }) { (error) in
+            faile!(error: error)
         }
-
+        
     }
     
     /**
      获取精选分类
      */
     
-    func lessonOrgsListRequestData() -> Void {
+    func lessonOrgsListRequestData(handler complectionHandler: HTTPRequestHandler?) -> Void {
         
         let params = ["limit":-1,"sortby":"Sortid","order":"asc"]
         
-        CAlamofireClient.shareClient.dataRequest(method: .GET, urlString: getHttpRequestUrl(kLessonOrgsListUrl), parameter: params, complectionHandler: { (responseObject) in
+        CAlamofireClient.shareClient.dataRequest(method: .GET, urlString: (getHttpRequestUrl(kLessonOrgsListUrl) + "?query=public:1"), parameter: params, complectionHandler: { (responseObject) in
             
-            }) { (error) in
-                
+            if let rep = responseObject!["List"] as?  [[String:AnyObject]] {
+                complectionHandler!(responseObject: rep)
+            }
+            
+            
+        }) { (error) in
+            print(error)
+           
         }
     }
     
@@ -82,8 +102,8 @@ class CAlamofireManager: NSObject {
     
     ///获取http请求路径
     private  func getHttpRequestUrl(url:String) -> String{
-    
-    return kBaseUrl + ":" + kPort20100 + url
+        
+        return kBaseUrl + ":" + kPort20100 + url
         
     }
     

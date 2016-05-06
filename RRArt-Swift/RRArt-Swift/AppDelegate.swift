@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     var topWindow: UIWindow?
+    var drawerController : MMViewController!
+    
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -47,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         topWindow?.hidden = false
         topWindow?.windowLevel = UIWindowLevelAlert
         topWindow?.rootViewController = TopWindowViewController.singleInstance
-
+        
         return true
     }
     
@@ -76,12 +78,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func handledShortCutItem(shortcutItem: UIApplicationShortcutItem) -> Bool{
-    
+        
         let handled = false
         
         
         if shortcutItem.type == "1" {
-//            let rootNavigationViewController = window!.rootViewController as? UINavigationController
+            //            let rootNavigationViewController = window!.rootViewController as? UINavigationController
             
         }
         
@@ -90,25 +92,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         return handled
-    
+        
     }
     
     /**
      获取默认界面
      */
     private func defaultContoller() -> UIViewController{
+        drawerController = MMViewController()
         
-       return  CommonTool.isNewUpDate() ? NewfeatureCollectionViewController() : MMViewController()
-
+        return  CommonTool.isNewUpDate() ? NewfeatureCollectionViewController() : drawerController
+        
     }
     
     
     func switchRootViewcontroller() -> Void {
-        window?.rootViewController = MMViewController()
+        drawerController = MMViewController()
+        window?.rootViewController = drawerController
     }
     
     deinit{
-    
+        
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
