@@ -31,6 +31,10 @@ class MyZone_RootViewController: BaseViewController {
         
     }
     
+    @IBAction func loginMth(sender: AnyObject) {
+        
+        debugPrint("点击登录")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,12 +44,12 @@ class MyZone_RootViewController: BaseViewController {
     }
     
     func setTablvView()  {
-        headerView.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
-        footerView.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+        headerView.backgroundColor = WTJRGB(35, 42, 48)
+        footerView.backgroundColor = WTJRGB(35, 42, 48)
         
         myZoneTabView.dataSource = self
         myZoneTabView.delegate = self
-        myZoneTabView.backgroundColor = UIColor(patternImage: UIImage(named: "bg.png")!)
+        myZoneTabView.backgroundColor = WTJRGB(35, 42, 48)
         myZoneTabView.separatorStyle = UITableViewCellSeparatorStyle.None
         
         //去掉下部空白格

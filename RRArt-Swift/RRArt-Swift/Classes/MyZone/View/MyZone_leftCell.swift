@@ -22,7 +22,7 @@ class MyZone_leftCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = UIColor.darkGrayColor()
-        backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+        backgroundColor = WTJRGB(35, 42, 48)
         let selectView = UIView()
         selectView.backgroundColor = UIColor.blackColor()
         selectedBackgroundView = selectView
