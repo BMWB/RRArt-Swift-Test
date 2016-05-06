@@ -44,6 +44,7 @@
 		5055B0711CD1A3AB00E76204 /* TMallMenu_RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055B0701CD1A3AB00E76204 /* TMallMenu_RootViewController.swift */; };
 		5055B0731CD1B7B500E76204 /* TmallTooBarData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5055B0721CD1B7B500E76204 /* TmallTooBarData.json */; };
 		5055B0761CD1EDDD00E76204 /* WTJWebBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055B0751CD1EDDD00E76204 /* WTJWebBrowserViewController.swift */; };
+		50569A541CDC444D00E2B9BC /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50569A531CDC444D00E2B9BC /* BaseModel.swift */; };
 		5072935E1CCF47D4004B52EA /* MainVcSetting.json in Resources */ = {isa = PBXBuildFile; fileRef = 5072935D1CCF47D4004B52EA /* MainVcSetting.json */; };
 		507293631CCF6802004B52EA /* CAlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507293621CCF6802004B52EA /* CAlamofireClient.swift */; };
 		50B2901E1CD8544B00477082 /* WTJRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B2901D1CD8544B00477082 /* WTJRefreshControl.swift */; };
@@ -133,6 +134,7 @@
 		5055B0701CD1A3AB00E76204 /* TMallMenu_RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMallMenu_RootViewController.swift; sourceTree = "<group>"; };
 		5055B0721CD1B7B500E76204 /* TmallTooBarData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TmallTooBarData.json; sourceTree = "<group>"; };
 		5055B0751CD1EDDD00E76204 /* WTJWebBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTJWebBrowserViewController.swift; sourceTree = "<group>"; };
+		50569A531CDC444D00E2B9BC /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		5072935D1CCF47D4004B52EA /* MainVcSetting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVcSetting.json; sourceTree = "<group>"; };
 		507293621CCF6802004B52EA /* CAlamofireClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAlamofireClient.swift; sourceTree = "<group>"; };
 		50B2901D1CD8544B00477082 /* WTJRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTJRefreshControl.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 			children = (
 				5072935C1CCF47AD004B52EA /* Resource */,
 				5046804F1CCE043800F9B454 /* BaseViewController.swift */,
+				50569A531CDC444D00E2B9BC /* BaseModel.swift */,
 				5046805F1CCE15B600F9B454 /* BaseNavigationViewController.swift */,
 				5007F0B31CD09383009FF19B /* BaseTableView.swift */,
 				5007F0B51CD093DA009FF19B /* BaseCollectionView.swift */,
@@ -699,6 +702,7 @@
 				505454F01CDB322400D21658 /* LessonHomeTableViewCell.swift in Sources */,
 				504680131CCDFA4700F9B454 /* AppDelegate.swift in Sources */,
 				504680501CCE043800F9B454 /* BaseViewController.swift in Sources */,
+				50569A541CDC444D00E2B9BC /* BaseModel.swift in Sources */,
 				5007F0B61CD093DA009FF19B /* BaseCollectionView.swift in Sources */,
 				5055B06E1CD1A2B000E76204 /* YZDisplayViewController.m in Sources */,
 				5055B0711CD1A3AB00E76204 /* TMallMenu_RootViewController.swift in Sources */,

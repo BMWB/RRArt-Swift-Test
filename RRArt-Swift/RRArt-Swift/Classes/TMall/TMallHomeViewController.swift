@@ -57,6 +57,7 @@ class TMallHomeViewController: BaseViewController {
             let models = TMallModels.objectArrayWithKeyValuesArray(responseObject as! [[String:AnyObject]])
             self.tmallArray = models
             debugPrint(models)
+            
             self.activityIndicatorView.stopAnimation()
             
         }) { (error) in

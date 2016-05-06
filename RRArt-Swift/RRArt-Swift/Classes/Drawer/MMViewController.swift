@@ -11,13 +11,14 @@ import MMDrawerController
 
 let MMLeftVc_width = kScreen_Width - 200
 
-
 class MMViewController: MMDrawerController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let centerVc = Lesson_RootViewController()
+        
         let leftVC   = MyZone_RootViewController()
+        leftVC.mainVC = self
+        
         centerViewController = centerVc
         leftDrawerViewController = leftVC
         maximumLeftDrawerWidth = MMLeftVc_width
@@ -25,8 +26,20 @@ class MMViewController: MMDrawerController {
         
         openDrawerGestureModeMask = MMOpenDrawerGestureMode.All
         closeDrawerGestureModeMask = MMCloseDrawerGestureMode.All
-    
+        
     }
-
-
+    
+    
+    lazy var centerVc :BaseNavigationViewController = {
+        
+        let orgModel = COrgListModels()
+        orgModel.Id = 1
+        
+        let centerVc = Lesson_RootViewController()
+        centerVc.orglist = orgModel
+        let centerNav = BaseNavigationViewController(rootViewController: centerVc)
+        
+        
+        return centerNav
+    }()
 }

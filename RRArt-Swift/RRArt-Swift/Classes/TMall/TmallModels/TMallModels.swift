@@ -9,7 +9,7 @@
 import UIKit
 
 //MARK: － 商城首页模型
-class TMallModels: NSObject{
+class TMallModels: BaseModel{
     ///激活
     var Active :Int = 0
     
@@ -64,11 +64,6 @@ class TMallModels: NSObject{
     ///商品url
     var RealUrl :String?
     
-    init(dict:[String:AnyObject]) {
-        super.init()
-        setValuesForKeysWithDictionary(dict)
-    }
-    
     //将字典数组转换模型数组
     class func objectArrayWithKeyValuesArray(list:[[String:AnyObject]]) -> [TMallModels] {
         var models = [TMallModels]()
@@ -78,12 +73,7 @@ class TMallModels: NSObject{
         }
         return models
     }
-    
-    //属性没有一一对应，就会进这个方法，然后程序也不会挂掉
-    override func setValue(value: AnyObject?, forUndefinedKey key: String) {
-        
-    }
-    
+
     //打印当前模型
     var properties = ["Active","BuyTimes","Decript","Hours","Id","Url","Name","Maintitle","Subtitle","NormalMoney","SaleMoney","Stock","Total","Sortid","Image","Title","Tags","RealUrl"]
     
@@ -95,7 +85,7 @@ class TMallModels: NSObject{
 }
 
 //MARK: － 商城标题模型
-class CTmallHomeModel: NSObject {
+class CTmallHomeModel: BaseModel {
     ///
     var Id :Int = 0
     
@@ -122,13 +112,6 @@ class CTmallHomeModel: NSObject {
     
     ///
     var Classeskey :String?
-    
-    init(dict:[String:AnyObject]) {
-        super.init()
-        setValuesForKeysWithDictionary(dict)
-    }
-    
-    
     
     //将字典数组转换模型数组
     class func getTmallHomeArray() -> [CTmallHomeModel]{
@@ -158,12 +141,7 @@ class CTmallHomeModel: NSObject {
         return models
         
     }
-    
-    //属性没有一一对应，就会进这个方法，然后程序也不会挂掉
-    override func setValue(value: AnyObject?, forUndefinedKey key: String) {
-        
-    }
-    
+
     //打印当前模型
     var properties = ["Id","name","Url","key","BuyUrl","BuyRecordUrl","BuyRecordKey","ClassesUrl","Classeskey"]
     
