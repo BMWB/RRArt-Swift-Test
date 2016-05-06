@@ -8,17 +8,25 @@
 
 import UIKit
 
-private let cellID = "MyZone_RootViewController"
+private let cellID = "MyZoneleftCell"
 class MyZone_RootViewController: BaseViewController {
+    
+    @IBOutlet weak var headerView: UIView!
+    
+    @IBOutlet weak var footerView: UIView!
+    
+    
+    @IBOutlet weak var myZoneTabView: UITableView!
+    
     weak var mainVC : MMViewController!
     
     var myZoneArray :[COrgListModels]?{
         didSet{
-            MyZoneTableView.reloadData()
+            myZoneTabView.reloadData()
             
             /// 默认选择第0个
             let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-            MyZoneTableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: .None)
+            myZoneTabView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: .None)
         }
         
     }
@@ -26,11 +34,24 @@ class MyZone_RootViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(MyZoneTableView)
-        
+        setTablvView()
         loadData()
+        
     }
     
+    func setTablvView()  {
+        headerView.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+        footerView.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+        
+        myZoneTabView.dataSource = self
+        myZoneTabView.delegate = self
+        myZoneTabView.backgroundColor = UIColor(patternImage: UIImage(named: "bg.png")!)
+        myZoneTabView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        //去掉下部空白格
+        myZoneTabView.tableFooterView = UIView()
+
+    }
     
     private func  loadData(){
         
@@ -46,18 +67,6 @@ class MyZone_RootViewController: BaseViewController {
         
     }
     
-    
-    lazy var  MyZoneTableView :BaseTableView = {
-        
-        let tableView = BaseTableView(frame:CGRectMake(0, 0, MMLeftVc_width, self.view.bounds.height), style: UITableViewStyle.Plain)
-        tableView.dataSource = self
-        tableView.delegate = self
-        //        tableView.registerNib(UINib(nibName:"LessonHomeTableViewCell" ,bundle: nil), forCellReuseIdentifier: cellID)
-        //        tableView.rowHeight = 118
-        return tableView
-    }()
-    
-    
 }
 
 extension MyZone_RootViewController:UITableViewDataSource{
@@ -68,24 +77,18 @@ extension MyZone_RootViewController:UITableViewDataSource{
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var  cell = tableView.dequeueReusableCellWithIdentifier(cellID)
-        
-        if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellID)
-            cell!.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        }
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellID) as! MyZone_leftCell
         
         let myzone = self.myZoneArray![indexPath.row]
-        
-        cell?.textLabel?.text = myzone.Name
-        return cell!
+        cell.org = myzone
+        return cell
     }
     
 }
 
 
 extension MyZone_RootViewController:UITableViewDelegate{
-
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let myzone = self.myZoneArray![indexPath.row]

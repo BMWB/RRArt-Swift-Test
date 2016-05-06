@@ -85,7 +85,7 @@ class CAlamofireManager: NSObject {
         
         let params = ["limit":-1,"sortby":"Sortid","order":"asc"]
         
-        CAlamofireClient.shareClient.dataRequest(method: .GET, urlString: getHttpRequestUrl(kLessonOrgsListUrl), parameter: params, complectionHandler: { (responseObject) in
+        CAlamofireClient.shareClient.dataRequest(method: .GET, urlString: (getHttpRequestUrl(kLessonOrgsListUrl) + "?query=public:1"), parameter: params, complectionHandler: { (responseObject) in
             
             if let rep = responseObject!["List"] as?  [[String:AnyObject]] {
                 complectionHandler!(responseObject: rep)

@@ -16,7 +16,7 @@ class MMViewController: MMDrawerController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let leftVC   = MyZone_RootViewController()
+        let leftVC   = GET_SB("LeftVc").instantiateViewControllerWithIdentifier("MyZone_RootViewController") as! MyZone_RootViewController
         leftVC.mainVC = self
         
         centerViewController = centerVc
