@@ -34,6 +34,7 @@ class MMViewController: MMDrawerController {
         
         let orgModel = COrgListModels()
         orgModel.Id = 1
+        orgModel.Name = "每日推荐"
         
         let centerVc = Lesson_RootViewController()
         centerVc.orglist = orgModel

@@ -24,7 +24,7 @@ class Lesson_RootViewController: BaseViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.orangeColor()
         view.addSubview(lessonHomeTableView)
-       
+        navigationItem.title = orglist.Name
         loadData()
     }
 

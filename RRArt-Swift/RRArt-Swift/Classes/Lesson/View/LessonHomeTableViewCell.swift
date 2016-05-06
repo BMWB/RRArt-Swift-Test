@@ -45,6 +45,7 @@ class LessonHomeTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        title.numberOfLines = 0
     
     }
 
