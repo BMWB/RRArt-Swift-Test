@@ -9,6 +9,7 @@
 import UIKit
 
 private let cellID = "MyZoneleftCell"
+
 class MyZone_RootViewController: BaseViewController {
     
     @IBOutlet weak var headerView: UIView!
@@ -17,6 +18,8 @@ class MyZone_RootViewController: BaseViewController {
     
     
     @IBOutlet weak var myZoneTabView: UITableView!
+    
+    @IBOutlet weak var selectBtn: ImageTextButton!
     
     weak var mainVC : MMViewController!
     
@@ -55,6 +58,8 @@ class MyZone_RootViewController: BaseViewController {
         //去掉下部空白格
         myZoneTabView.tableFooterView = UIView()
 
+        
+        selectBtn.buttonTitleWithImageAlignment = UIButtonTitleWithImageAlignmentUp
     }
     
     private func  loadData(){

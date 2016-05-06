@@ -48,6 +48,7 @@
 		50569A571CDC798700E2B9BC /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 50569A561CDC798700E2B9BC /* bg.png */; };
 		50569A5A1CDC7FD700E2B9BC /* LeftVc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50569A591CDC7FD700E2B9BC /* LeftVc.storyboard */; };
 		50569A5D1CDC84AA00E2B9BC /* MyZone_leftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50569A5C1CDC84AA00E2B9BC /* MyZone_leftCell.swift */; };
+		50569A611CDC99FE00E2B9BC /* ImageTextButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 50569A601CDC99FE00E2B9BC /* ImageTextButton.m */; };
 		5072935E1CCF47D4004B52EA /* MainVcSetting.json in Resources */ = {isa = PBXBuildFile; fileRef = 5072935D1CCF47D4004B52EA /* MainVcSetting.json */; };
 		507293631CCF6802004B52EA /* CAlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507293621CCF6802004B52EA /* CAlamofireClient.swift */; };
 		50B2901E1CD8544B00477082 /* WTJRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B2901D1CD8544B00477082 /* WTJRefreshControl.swift */; };
@@ -141,6 +142,8 @@
 		50569A561CDC798700E2B9BC /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		50569A591CDC7FD700E2B9BC /* LeftVc.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LeftVc.storyboard; sourceTree = "<group>"; };
 		50569A5C1CDC84AA00E2B9BC /* MyZone_leftCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyZone_leftCell.swift; sourceTree = "<group>"; };
+		50569A5F1CDC99FE00E2B9BC /* ImageTextButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTextButton.h; sourceTree = "<group>"; };
+		50569A601CDC99FE00E2B9BC /* ImageTextButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTextButton.m; sourceTree = "<group>"; };
 		5072935D1CCF47D4004B52EA /* MainVcSetting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVcSetting.json; sourceTree = "<group>"; };
 		507293621CCF6802004B52EA /* CAlamofireClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAlamofireClient.swift; sourceTree = "<group>"; };
 		50B2901D1CD8544B00477082 /* WTJRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTJRefreshControl.swift; sourceTree = "<group>"; };
@@ -315,6 +318,7 @@
 		504680431CCE01C700F9B454 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				50569A5E1CDC99FE00E2B9BC /* ImageTextButton */,
 				5055B0741CD1ED7200E76204 /* WTJWebBrowser */,
 				5055B0621CD1A2B000E76204 /* YZDisplayViewController */,
 			);
@@ -464,6 +468,15 @@
 				50569A5C1CDC84AA00E2B9BC /* MyZone_leftCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		50569A5E1CDC99FE00E2B9BC /* ImageTextButton */ = {
+			isa = PBXGroup;
+			children = (
+				50569A5F1CDC99FE00E2B9BC /* ImageTextButton.h */,
+				50569A601CDC99FE00E2B9BC /* ImageTextButton.m */,
+			);
+			path = ImageTextButton;
 			sourceTree = "<group>";
 		};
 		5072935C1CCF47AD004B52EA /* Resource */ = {
@@ -717,6 +730,7 @@
 				504E69D21CD048BA002CB284 /* CAlamofireManager.swift in Sources */,
 				5046805A1CCE055600F9B454 /* WebSchool_RootViewController.swift in Sources */,
 				504680541CCE051C00F9B454 /* Lesson_RootViewController.swift in Sources */,
+				50569A611CDC99FE00E2B9BC /* ImageTextButton.m in Sources */,
 				5055B0761CD1EDDD00E76204 /* WTJWebBrowserViewController.swift in Sources */,
 				504680581CCE054500F9B454 /* TMallHomeViewController.swift in Sources */,
 				5055B06F1CD1A2B000E76204 /* YZFlowLayout.m in Sources */,
